@@ -1,0 +1,27 @@
+Bundler/OrderedGems:
+  Exclude:
+    - 'Gemfile'
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength: 
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 200
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - '.git/**/*'
+    - 'db/migrate/*.rb'
+    - 'db/*.rb'
+    - 'bin/**/*'
+
+Style/Documentation:
+  Enabled: false
