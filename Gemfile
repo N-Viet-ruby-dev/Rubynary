@@ -20,6 +20,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 group :development, :test do
   gem "rspec-rails", "~> 3.8"
   gem "rubocop-rails", require: false
+  gem "shoulda-matchers"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
 end
 
