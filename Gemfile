@@ -21,12 +21,14 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "devise"
-gem "bootstrap"
 gem "sassc-rails"
-gem "font-awesome-rails"
+gem "devise"
 gem "toastr-rails"
 gem "owlcarousel-rails"
 gem "ransack"
+gem "bootstrap"
+gem "bootstrap-sass"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "rspec-rails", "~> 3.8"

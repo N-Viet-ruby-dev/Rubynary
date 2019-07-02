@@ -1,0 +1,20 @@
+.container
+  .row
+    .col-sm-9.col-md-7.col-lg-5.mx-auto
+      .card.card-signin.my-5
+        .card-body
+          h5.card-title.text-center = t(".sign_in")
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .form-label-group
+              = f.email_field :email, class: "form-control",autofocus: true, placeholder: t(".email_address")
+              = f.label :email, t(".email")
+            .form-label-group
+              = f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: t(".password")
+              = f.label :password, t(".password")
+            - if devise_mapping.rememberable?
+              .custom-control.custom-checkbox.mb-3
+                = f.check_box :remember_me, class: "custom-control-input"
+                = f.label :remember_me, t(".remember_me") ,class: "custom-control-label"
+            .actions
+              = f.submit t(".sign_in"), class: "btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+          = render "devise/shared/links"

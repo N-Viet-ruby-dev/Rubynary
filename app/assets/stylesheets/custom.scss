@@ -2,11 +2,6 @@ thead#word {
   background-color: #546EF4;
   color: white;
 }
-:root {
-  --input-padding-x: 1.5rem;
-  --input-padding-y: .75rem;
-}
-
 body#login{
   background: #fff;
   background: linear-gradient(to right, #0062E6, #33AEFF);
@@ -138,7 +133,6 @@ body#login{
   }
 }
 
-
 .search-form{
   margin: 0 auto;
   width: 50%;
@@ -186,7 +180,7 @@ body#login{
   font-size: 40px;
   margin: 0 auto;
 }
- 
+
 .container {
   border: 1px solid #333;
   padding: 10px;
