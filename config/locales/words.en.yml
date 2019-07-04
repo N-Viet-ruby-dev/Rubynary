@@ -5,3 +5,13 @@ en:
       japanese: "Japanese"
       english: "English"
       vietnamese: "Vietnamese"
+    form_search:
+      search: "Searchsss"
+    result_search:
+      project_name: "Project Name"
+      description: "Description"
+      vi: "VN"
+      en: "EN"
+      ja: "JA"
+    search:
+      dont_result: "Don't result!"

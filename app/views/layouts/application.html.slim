@@ -3,6 +3,8 @@ html
   head
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
     title Rubynary
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title =t(".title")
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -13,3 +15,4 @@ html
       javascript:
         toastr["#{type}"]("#{f[1]}")
     = yield
+    = render "layouts/header"

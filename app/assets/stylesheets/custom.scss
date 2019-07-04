@@ -138,3 +138,75 @@ body#login{
   }
 }
 
+
+.search-form{
+  margin: 0 auto;
+  width: 50%;
+}
+.input-group{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.form-search{
+  height: 40px;
+  width: 550px;
+  font-size: 30px;
+  text-align: center;
+  float: left;
+  border-width: 1px;
+  border-color: #DDDD;
+}
+
+.btn-search{
+  float: right;
+  height: 40px;
+  width: 70px;
+  font-size: 15px;
+}
+
+.btn-group{
+  float: right;
+}
+
+.menuzord{
+  background-color: #3D9970;
+}
+
+.result-search{
+  margin-top: 20px;
+  width: 50%;
+  margin-left: 313px;
+}
+
+.text-info{
+  text-align: center;
+  font-size: 40px;
+  margin: 0 auto;
+}
+ 
+.container {
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 20px;
+}
+.container-width{
+  width: 50% !important;
+}
+#post {
+  width: 300px;
+  float: left;
+  height: 165px;
+}
+#sidebar {
+  width: 280px;
+  background: #DDDDDD;
+  float: right;
+  height: 165px;
+  border: 0px solid #333;
+}
+.description{
+  margin: 20px;
+  font-size: 20px;
+}
+.clear { clear: both }

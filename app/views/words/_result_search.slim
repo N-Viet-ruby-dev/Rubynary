@@ -1,0 +1,20 @@
+.container.container-width
+  #post
+    ul.list-group.list-group-flush
+      li.list-group-item style=("color: red;")  = t(".project_name")
+      li.list-group-item
+        = t(".vi")
+        | : 
+        = word.vi 
+      li.list-group-item
+        = t(".en")
+        | : 
+        = word.en
+      li.list-group-item
+        = t(".ja")
+        | : 
+        = word.ja
+  #sidebar 
+    span.description
+      = t(".description")
+  .clear

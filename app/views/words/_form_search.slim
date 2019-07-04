@@ -1,0 +1,5 @@
+.search-form
+  .input-group
+    = search_form_for @search, url: search_path do |f|
+      = f.search_field :ja_or_en_or_vi_cont, class: "form-search", :required => true, autocomplete: :off
+      = f.submit "Search", class: "btn-info btn-search"

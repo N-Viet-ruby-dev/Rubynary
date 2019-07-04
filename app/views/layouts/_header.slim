@@ -1,0 +1,28 @@
+header
+  #myHeader.header
+    .container-fluid
+      .row
+        nav#menuzord-right.menuzord
+          #cssmenu
+            ul
+              li
+                = link_to root_path 
+                  i.fa.fa-home aria-hidden="true" 
+                  | &ensp;
+                  =t(".search")
+              li
+                = link_to words_path 
+                  i.fas.fa-list aria-hidden="true" 
+                  | &ensp;
+                  =t(".list_words")
+              li
+                = link_to "#"
+                  i.fa.fa-users aria-hidden="true" 
+                  | &ensp;
+                  =t(".list_users")
+          .register
+            ul
+              li
+                = link_to t(".log_in")
+              li
+                = link_to t(".sign_up")

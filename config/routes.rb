@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   resources :words, only: :index
-  root "words#index"
   devise_for :users
+  get :search, controller: :words
+  root "words#index"
 end

@@ -31,3 +31,12 @@
 
 en:
   hello: Hello world
+  layouts:
+    application:
+      title:  "Ruby Nary"
+    header:
+      search: "Search"
+      list_words: "List words"
+      list_users: "List users"
+      log_in: "Log in"
+      sign_up: "Sign up"
