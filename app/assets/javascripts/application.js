@@ -10,7 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
+//= require jquery.dataTables.min
 //= require activestorage
-//= require turbolinks
-//= require_tree .
+//= require bootstrap-sprockets
+
+$(document).ready(function() {
+ $('#zero_config').DataTable()
+});
