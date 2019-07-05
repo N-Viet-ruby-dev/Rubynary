@@ -1,8 +1,30 @@
-= render "form_search"
-- if !@words_search.nil?
-  - if @words_search.empty?
-    h1.text-center = t (".find_result")
+.content
+  = render "form_search"
+  - if !@search_words.nil?
+    - if @search_words.empty?
+      h1.text-center = t(".find_result")
+    - else
+      #words
+        = render partial: "result_search", collection: @search_words, as: :word
+    #paginator.text-center
+      = paginate @search_words, remote: true
   - else
-    = render partial: "result_search", collection: @words_search, as: :word
-- else
-  h1.text-center = t (".input_word")
+    .content-word
+      #post
+        ul.list-group.list-group-flush
+          li.list-group-item.project-name = t(".project_name")
+          li.list-group-item
+            = t(".ja_ex")
+          li.list-group-item
+            = t(".en_ex")
+          li.list-group-item
+            = t(".vi_ex")
+      #sidebar
+        h4.description
+          strong= t(".description")
+        .description
+          = t(".ja_ex")
+          br
+          = t(".en_ex")
+          br
+          = t(".vi_ex")

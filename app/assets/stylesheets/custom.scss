@@ -2,6 +2,26 @@ thead#word {
   background-color: #546EF4;
   color: white;
 }
+
+#close {
+  float: right;
+  margin-top: -60px;
+}
+
+.action {
+  width: 210px;
+  margin-top: 243px;
+  margin-right: 5%;
+  float: right;
+  position: absolute;
+  right: 20%;
+  
+}
+
+.btn.btn-info {
+  margin-right: 40px;
+}
+
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
@@ -142,26 +162,31 @@ body#login {
   margin: 0 auto;
   width: 50%;
 }
+
 .input-group{
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
+
 .form-search{
   height: 40px;
-  width: 550px;
+  width: 85%;
   font-size: 30px;
   text-align: center;
   float: left;
-  border-width: 1px;
-  border-color: #DDDD;
+  border: 2px solid #23aade;
+  border-radius: 10px;
 }
 
-.btn-search{
+.btn-primary{
   float: right;
   height: 40px;
-  width: 70px;
+  width: 13%;
   font-size: 15px;
+  border-radius: 3px;
+  background-color: #23aade;
+  border-color: #23aade;
 }
 
 .btn-group{
@@ -169,7 +194,7 @@ body#login {
 }
 
 .menuzord{
-  background-color: #3D9970;
+  background-color: #23aade;
 }
 
 .result-search{
@@ -177,55 +202,93 @@ body#login {
   width: 50%;
   margin-left: 313px;
 }
+
+.word_search {
+  width: 100%;
+}
+
 .project-name{
   color: red;
 }
+
 .text-info{
   text-align: center;
   font-size: 40px;
   margin: 0 auto;
 }
-.container-width{
-  width: 50% !important;
-  border: 1px solid #333;
-  padding: 10px;
-  margin: 20px;
-}
+
 #post {
-  width: 300px;
+  width: 49%;
   float: left;
-  height: 165px;
+  height: 90%;
+  border: 1px solid #23aade;
+  border-radius: 7px;
+  background-color: white;
 }
+
 #sidebar {
-  width: 280px;
-  background: #DDDDDD;
+  width: 49%;
   float: right;
-  height: 165px;
-  border: 0px solid #333;
+  height: 90%;
+  border-radius: 7px;
+  border: 1px solid #23aade;
+  background-color: white;
 }
+
+.list-group.list-group-flush {
+  padding: 2px;
+}
+
+.content-word {
+  margin: 0 auto;
+  padding: 15px;
+  width: 60%;
+  height: 300px;
+  border: 1px solid #23aade;
+  border-radius: 10px;
+  margin-top: 26px;
+  margin-bottom: 32px;
+}
+
+#word {
+  margin-bottom: 50px;
+}
+
 .description{
-  margin: 20px;
+  margin: 10px;
   font-size: 20px;
 }
+
+#paginator {
+  margin-left: 45%;
+}
+
 .clear { clear: both }
+Collapse
 
 /* Project
 -------------------------------------------------- */
+
 .table-project{
   text-align: center;
 }
+
 #close{
   float: right;
+  margin-top: 0px;
 }
+
 .new-user{
   margin-bottom: 20px;
 }
+
 .add-new-user{
   float: right;
   border-radius: 0px !important;
-  background-color: #546ef4 !important;
+  background-color: #23aade !important;
 }
+
 #user-thead{
-  background-color: #546ef4;
+  background-color: #23aade;
   color: #fff;
 }

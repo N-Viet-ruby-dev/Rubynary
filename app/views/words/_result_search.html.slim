@@ -1,20 +1,19 @@
-.container.container-width
+.content-word
   #post
     ul.list-group.list-group-flush
       li.list-group-item.project-name = t(".project_name")
       li.list-group-item
-        = t (".vi")
-        | : 
-        = word.vi 
+        = t(".ja", word: word.ja)
       li.list-group-item
-        = t (".en")
-        | : 
-        = word.en
+        = t(".en", word: word.en)
       li.list-group-item
-        = t (".ja")
-        | : 
-        = word.ja
-  #sidebar 
-    span.description
-      = t(".description")
-  .clear
+        = t(".vi", word: word.vi)
+  #sidebar
+    h4.description
+      strong= t(".description")
+      .description
+        = simple_format(word.description)
+  .action
+    = link_to t(".edit"), edit_word_path(word), class: "btn btn-info", remote: true
+    = link_to t(".delete"), word, class: "btn btn-danger", method: :delete, data: { confirm: t(".confirm") }, remote: true, id: "word_delete"
+#myModalIndex

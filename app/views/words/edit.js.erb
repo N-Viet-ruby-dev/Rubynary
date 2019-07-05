@@ -1,0 +1,7 @@
+$("#myModalIndex").html("<%= j render 'edit', word: @word %>");
+$("#myModalEdit").modal("show");
+$("#save").click(function() {
+  $("#myModalEdit").modal("hide");
+  window.location.assign("");
+  toastr["success"]("Update word successfully!");
+});

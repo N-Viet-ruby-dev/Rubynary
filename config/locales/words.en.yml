@@ -7,12 +7,16 @@ en:
       vietnamese: "Vietnamese"
       find_result: "Result not found"
       input_word: "Please enter your key word!"
+      vi_ex: "Vietnamese : Xin chào !"
+      en_ex: "English : Hello !"
+      ja_ex: "Japanese : こんにちは !"
     result_search:
       project_name: "Project Name"
       description: "Description"
-      vi: "VN"
-      en: "EN"
-      ja: "JA"
+      vi: "Vietnamese: %{word}"
+      en: "English: %{word}"
+      ja: "Japanese: %{word}"
+      confirm: "Are you sure to delete this word ?"
     create:
       file_imported: File Imported
       not_file_selected: Not File Selected
@@ -21,3 +25,16 @@ en:
       import_from: Import From CSV-Excel File
       import: Import
       select_project: Select Project...
+      description: "Description: "
+      vi: "Vietnamese: %{word}"
+      en: "English: %{word}"
+      ja: "Japanese: %{word}"
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "Are you sure to delete this word ?"
+    edit:
+      edit: "Edit"
+      save: "Save"
+    form_search:
+      search: "Search"
+      your_search: "Enter keyword"

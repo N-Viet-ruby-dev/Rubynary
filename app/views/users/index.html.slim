@@ -3,22 +3,22 @@
     .table-responsive
       #zero_config_wrapper.dataTables_wrapper.container-fluid.dt-bootstrap4
         .row
-          h1.text-center = t (".all_users")
+          h1.text-center = t(".all_users")
           .col-sm-12.new-user
             = link_to new_user_path, remote: true, class: "btn btn-info add-new-user" do
-              = t ( ".add_user")
+              = t(".add_user")
           .col-sm-12
             table#user.table.table-striped.table-bordered.dataTable.table-hover aria-describedby="zero_config_info" role="grid"
               thead#user-thead
                 tr role="row"
                   th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                    = t (".name")
+                    = t(".name")
                   th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                    = t (".email")
+                    = t(".email")
                   th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                    = t (".role")
-                  th.text-center= t (".edit")
-                  th.text-center= t (".delete")
+                    = t(".role")
+                  th.text-center= t(".edit")
+                  th.text-center= t(".delete")
               tbody#user-table
                 = render partial: "user", collection: @users, as: :user
 #myModalIndex
