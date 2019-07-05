@@ -1,0 +1,4 @@
+$("#project").DataTable().clear().destroy(false);
+$("#project_table").html("<%= j render partial: "project", collection: @projects %>")
+toastr["success"] = "Success!"
+initDataTable();

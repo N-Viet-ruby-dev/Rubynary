@@ -12,14 +12,23 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require jquery.dataTables.min
+//= require lib/jquery.dataTables.min
+//= require lib/dataTables.bootstrap4.min
 //= require activestorage
 //= require toastr
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require owl.carousel
 //= require custom
 
+function initDataTable(){
+  $('#project').DataTable({
+   destroy: true,
+   order: []
+  });
+}
+
 $(document).ready(function() {
- $('#zero_config').DataTable()
+  $('#zero_config').DataTable();
+  $('#project').DataTable();
+  initDataTable();
 });

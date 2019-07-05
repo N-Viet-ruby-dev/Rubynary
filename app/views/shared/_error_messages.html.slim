@@ -1,0 +1,6 @@
+- if object.errors.any?
+  - object.errors.full_messages.each do |message|
+    javascript:
+      toastr.error("#{message}")
+  javascript:
+    toastr.error("#{I18n.t("errors.messages.not_saved", count: object.errors.count, resource: object.class.model_name.human.downcase)}")

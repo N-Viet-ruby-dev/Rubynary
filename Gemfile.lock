@@ -77,8 +77,8 @@ GEM
     diff-lcs (1.3)
     erubi (1.8.0)
     execjs (2.7.0)
-    faker (1.7.3)
-      i18n (~> 0.5)
+    faker (1.9.5)
+      i18n (>= 0.7)
     ffi (1.11.1)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
@@ -228,12 +228,8 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 5.0)
-<<<<<<< 2bf754ff64854bea84296e637f4e3d2aa3eff520
     spring (2.1.0)
-=======
-    spring (2.0.2)
       activesupport (>= 4.2)
->>>>>>> login
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
@@ -275,21 +271,10 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap
-<<<<<<< 05142cde854353439111f47b1a9536f18e9a5e69
   bootstrap-sass (~> 3.4.1)
-=======
-<<<<<<< 2bf754ff64854bea84296e637f4e3d2aa3eff520
-  byebug
->>>>>>> login
   coffee-rails (~> 4.2)
   devise
-  faker (= 1.7.3)
-=======
-  bootstrap-sass
-  byebug
-  coffee-rails (~> 4.2)
-  devise
->>>>>>> login
+  faker
   font-awesome-rails
   font-awesome-sass (~> 5.8.1)
   jbuilder (~> 2.5)

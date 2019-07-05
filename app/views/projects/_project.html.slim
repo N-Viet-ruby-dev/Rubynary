@@ -1,0 +1,7 @@
+tr
+  td= project.id
+  td= project.name
+  td= project.color_code
+  td= l(project.created_at, format: :default)
+  td= link_to project_path(project), method: :delete, data: {confirm: t(".sure")}, remote: true do
+    = button_tag t(".delete"), class: "btn btn-warning"
