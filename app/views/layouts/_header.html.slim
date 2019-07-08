@@ -1,0 +1,18 @@
+header
+  #myHeader.header
+    .container-fluid
+      .row
+        nav#menuzord-right.menuzord
+          #cssmenu
+            ul
+              li
+                = link_to search_path 
+                  i.fa.fa-home aria-hidden="true" 
+                  | &ensp;
+                  = t (".search")
+          .register
+            ul
+              li
+                = link_to t (".log_in")
+              li
+                = link_to t (".sign_up")

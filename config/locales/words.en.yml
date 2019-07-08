@@ -5,3 +5,11 @@ en:
       japanese: "Japanese"
       english: "English"
       vietnamese: "Vietnamese"
+      find_result: "Result not found"
+      input_word: "Please enter your key word!"
+    result_search:
+      project_name: "Project Name"
+      description: "Description"
+      vi: "VN"
+      en: "EN"
+      ja: "JA"

@@ -15,6 +15,11 @@
 //= require jquery.dataTables.min
 //= require activestorage
 //= require toastr
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require owl.carousel
+//= require custom
+
 $(document).ready(function() {
  $('#zero_config').DataTable()
 });

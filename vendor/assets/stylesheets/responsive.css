@@ -1,0 +1,78 @@
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px){
+
+}
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px){
+	.header{
+		padding: 0;
+	}
+	.menuzord{
+		padding: 0 15px;
+	}
+	.logo{
+		display: none;
+	}
+	.mobile-menu div#page{
+		display: block;
+		position: relative;
+	}
+	.mobile-menu #page a
+	{
+		display: block;
+		width: 40px;
+		height: 18px;
+		padding: 21px 12px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.mobile-menu #page a:before,
+	.mobile-menu #page a:after{
+		content: '';
+		display: block;
+		background: #fff;
+		height: 2px;
+	}
+	.mobile-menu #page a span{
+		background: #fff;
+		display: block;
+		height: 2px;
+		margin: 3px 0;
+	}
+	.mobile-menu #page span.right{
+		display: block;
+		text-indent: 15px;
+		padding: 14px 20px;
+		font-size: 16px;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	#cssmenu{
+		display: none;
+	}
+	.mobile-menu{
+		display: block;
+		float: left;
+		max-width: 100%;
+	}
+	.register{
+		display: none;
+	}
+	.box-not{
+		display: none;
+	}
+}
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px){
+
+}
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px){
+
+}
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px){
+
+}

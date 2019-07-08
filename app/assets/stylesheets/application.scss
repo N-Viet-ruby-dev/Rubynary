@@ -12,7 +12,16 @@
  *
  *= require custom
  *= require jquery.dataTables.min.css
+ *= require animate.css
+ *= require jquery.mmenu.all.css
+ *= require styles.css
+ *= require responsive.css
+ *= require custom.scss
+ *= require owl.carousel
+ *= require owl.theme
  */
- @import "bootstrap";
- @import "font-awesome";
- @import "toastr";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "toastr";
