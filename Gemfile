@@ -17,9 +17,12 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "slim-rails"
-gem "bootstrap-sass", "~> 3.4.1"
 gem "jquery-rails"
-
+gem "devise"
+gem "bootstrap"
+gem "sassc-rails"
+gem "font-awesome-rails"
+gem "toastr-rails"
 group :development, :test do
   gem "rspec-rails", "~> 3.8"
   gem "rubocop-rails", require: false

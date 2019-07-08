@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    title Rubynary
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    - flash.each do |f|
+      - type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info')
+      javascript:
+        toastr["#{type}"]("#{f[1]}")
+    = yield

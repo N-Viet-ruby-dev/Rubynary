@@ -14,8 +14,7 @@
 //= require rails-ujs
 //= require jquery.dataTables.min
 //= require activestorage
-//= require bootstrap-sprockets
-
+//= require toastr
 $(document).ready(function() {
  $('#zero_config').DataTable()
 });
