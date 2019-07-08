@@ -1,22 +1,8 @@
-.card
-  .card-body
-    .table-responsive
-      #zero_config_wrapper.dataTables_wrapper.container-fluid.dt-bootstrap4
-        .row
-          h1.text-center = t (".words")
-          .col-sm-12
-            table#zero_config.table.table-striped.table-bordered.dataTable.table-hover aria-describedby="zero_config_info" role="grid"
-              thead#word
-                tr role="row"
-                  th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                    = t (".japanese")
-                  th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                    = t (".english")
-                  th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                    = t (".vietnamese")
-              tbody
-                - @words.each do |word|
-                  tr
-                    td= word.ja
-                    td= word.en
-                    td= word.vi
+= render "form_search"
+- if !@words_search.nil?
+  - if @words_search.empty?
+    h1.text-center = t (".find_result")
+  - else
+    = render partial: "result_search", collection: @words_search, as: :word
+- else
+  h1.text-center = t (".input_word")

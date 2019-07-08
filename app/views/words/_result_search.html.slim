@@ -1,17 +1,17 @@
 .container.container-width
   #post
     ul.list-group.list-group-flush
-      li.list-group-item style=("color: red;")  = t(".project_name")
+      li.list-group-item.project-name = t(".project_name")
       li.list-group-item
-        = t(".vi")
+        = t (".vi")
         | : 
         = word.vi 
       li.list-group-item
-        = t(".en")
+        = t (".en")
         | : 
         = word.en
       li.list-group-item
-        = t(".ja")
+        = t (".ja")
         | : 
         = word.ja
   #sidebar 

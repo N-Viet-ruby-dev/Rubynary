@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :words, only: :index
+  resources :words
   devise_for :users
-  get :search, controller: :words
+  get "/search", to: "words#index"
   root "words#index"
 end

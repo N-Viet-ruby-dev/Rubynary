@@ -1,6 +1,0 @@
-= render "form_search"
-- if @words.present?
-    = render partial: "result_search", collection: @words, as: :word
-- else
-    .text-info
-      span = t(".dont_result")
