@@ -5,12 +5,19 @@ html
     title = t(".title")
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = render "layouts/header"
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload"
+    = javascript_include_tag "application", "data-turbolinks-track": "reload"
   body
-    - flash.each do |f|
-      - type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info')
-      javascript:
-        toastr["#{type}"]("#{f[1]}")
-    = yield
+    - if controller.controller_name == "sessions"
+      - flash.each do |f|
+        - type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info')
+        javascript:
+          toastr["#{type}"]("#{f[1]}")
+      = yield
+    - else
+      = render "layouts/header"
+      - flash.each do |f|
+        - type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info')
+        javascript:
+          toastr["#{type}"]("#{f[1]}")
+      = yield

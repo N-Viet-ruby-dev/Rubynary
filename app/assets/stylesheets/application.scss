@@ -11,7 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require custom
- *= require jquery.dataTables.min.css
  *= require animate.css
  *= require jquery.mmenu.all.css
  *= require styles.css
@@ -19,8 +18,8 @@
  *= require custom.scss
  *= require owl.carousel
  *= require owl.theme
+ *= require lib/dataTables.bootstrap4.min
  */
-@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";

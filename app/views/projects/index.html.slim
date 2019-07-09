@@ -1,0 +1,23 @@
+h4.card-title
+  b= t(".project_management")
+span
+  = link_to t(".add_project"), new_project_url, remote: true, class: "btn btn-primary btn-sm"
+.table-project
+  table#project.table.table-striped.table-bordered style="width:100%"
+    thead
+      tr
+        th= t(".project_id")
+        th= t(".name")
+        th= t(".color")
+        th= t(".created_at")
+        th
+    tbody#project_table
+      = render partial: "project", collection: @projects
+    tfoot
+        tr
+          th= t(".project_id")
+          th= t(".name")
+          th= t(".color")
+          th= t(".created_at")
+          th
+#myModal1

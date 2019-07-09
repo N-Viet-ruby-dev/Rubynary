@@ -6,13 +6,29 @@ header
           #cssmenu
             ul
               li
-                = link_to search_path 
-                  i.fa.fa-home aria-hidden="true" 
+                = link_to search_path
+                  i.fa.fa-home aria-hidden="true"
                   | &ensp;
-                  = t (".search")
+                  = t(".search")
+              li
+                = link_to projects_path
+                  i.fa.fa-tasks aria-hidden="true"
+                  | &ensp;
+                  = t(".projects")
+              li
+                = link_to "#"
+                  i.fa.fa-user aria-hidden="true"
+                  | &ensp;
+                  = t(".users")
           .register
             ul
-              li
-                = link_to t (".log_in")
-              li
-                = link_to t (".sign_up")
+              - if user_signed_in?
+                li
+                  = link_to current_user.name
+                li
+                  = link_to t(".log_out"), destroy_user_session_path, data: { confirm: t(".sure") }, method: :delete
+              - else
+                li
+                  = link_to t(".log_in"), new_user_session_path
+                li
+                  = link_to t(".sign_up")

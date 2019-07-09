@@ -20,7 +20,6 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
-
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -32,7 +31,6 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require "devise/orm/active_record"
-
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
@@ -117,7 +115,6 @@ Devise.setup do |config|
   # Set up a pepper to generate the hashed password.
   # config.pepper = '040804e9329a02e6f0fea183f4268ada4f3569efc72ebffcf461e474265aa387dd114b678cf30c117f982c551e3dffc72806dcb25f5dcadb357c87f019dc2141'
   # rubocop:enable Metrics/LineLength
-
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
 
@@ -251,7 +248,6 @@ Devise.setup do |config|
   #
   # If you have any extra navigational formats, like :iphone or :mobile, you
   # should add them to the navigational formats lists.
-  #
   # The "*/*" below is required to match Internet Explorer requests.
   # config.navigational_formats = ['*/*', :html]
 
