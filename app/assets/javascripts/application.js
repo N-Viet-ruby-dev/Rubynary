@@ -27,8 +27,17 @@ function initDataTable(){
   });
 }
 
+function initDataTableUser(){
+  $('#user').DataTable({
+   destroy: true,
+   order: []
+  });
+}
+
 $(document).ready(function() {
   $('#zero_config').DataTable();
   $('#project').DataTable();
+  $('#user').DataTable();
   initDataTable();
+  initDataTableUser();
 });

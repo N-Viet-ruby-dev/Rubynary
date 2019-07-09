@@ -185,9 +185,11 @@ body#login {
   font-size: 40px;
   margin: 0 auto;
 }
-
 .container-width{
   width: 50% !important;
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 20px;
 }
 #post {
   width: 300px;
@@ -211,4 +213,19 @@ body#login {
 -------------------------------------------------- */
 .table-project{
   text-align: center;
+}
+#close{
+  float: right;
+}
+.new-user{
+  margin-bottom: 20px;
+}
+.add-new-user{
+  float: right;
+  border-radius: 0px !important;
+  background-color: #546ef4 !important;
+}
+#user-thead{
+  background-color: #546ef4;
+  color: #fff;
 }

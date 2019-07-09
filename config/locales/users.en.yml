@@ -1,0 +1,18 @@
+en:
+  users:
+    index:
+      all_user: "All Users"
+      name: "Name"
+      email: "Email"
+      role: "Role"
+      edit: "Edit"
+      delete: "Delete"
+      add_user: "Add New User"
+    edit:
+      edit: "Edit"
+      save: "Save"
+    new:
+      new: "New"
+      create: "Create"
+    user:
+      conf: "You sure ?"
