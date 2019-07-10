@@ -1,0 +1,7 @@
+tr
+  td= user.name
+  td= user.email
+  td= user.role
+  td.text-center= link_to t(".edit"), edit_user_path(user), remote: true
+  td.text-center= link_to t(".delete"), user, method: :delete,
+    data: { confirm: t(".conf") }, remote: true, class: "user_delete"

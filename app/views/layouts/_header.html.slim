@@ -16,7 +16,7 @@ header
                   | &ensp;
                   = t(".projects")
               li
-                = link_to "#"
+                = link_to users_path
                   i.fa.fa-user aria-hidden="true"
                   | &ensp;
                   = t(".users")
@@ -30,5 +30,3 @@ header
               - else
                 li
                   = link_to t(".log_in"), new_user_session_path
-                li
-                  = link_to t(".sign_up")
