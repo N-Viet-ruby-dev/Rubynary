@@ -27,6 +27,8 @@ gem "bootstrap-sass", "~> 3.4.1"
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 5.8.1"
 gem "faker"
+gem "roo"
+gem "roo-xls"
 
 group :development, :test do
   gem "rspec-rails", "~> 3.8"

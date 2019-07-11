@@ -17,5 +17,5 @@ body#login
                   = f.check_box :remember_me, class: "custom-control-input"
                   = f.label :remember_me, t(".remember_me"), class: "custom-control-label"
               .actions
-                = f.submit t(".sign_in"), class: "btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                = f.submit t(".sign_in"), class: "btn btn-lg btn-info btn-block btn-login text-uppercase font-weight-bold mb-2"
             = render "devise/shared/links"
