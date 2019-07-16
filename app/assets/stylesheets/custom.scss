@@ -229,3 +229,24 @@ body#login {
   background-color: #546ef4;
   color: #fff;
 }
+
+.select-box{
+  width: 100%;
+  height: 40px;
+}
+#project_id{
+  float: right;
+  height: 30px;
+  width: 196px;
+}
+.ms-choice{
+  height: 30px !important;
+  border-radius: 0px !important;
+}
+.add-to-project{
+  margin-left: 5px;
+  background: #546ef4;
+  color: #fff;
+  border: none;
+  height: 33px;
+}

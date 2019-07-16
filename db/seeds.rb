@@ -1,4 +1,4 @@
-50.times do |n|
+80.times do |n|
   Word.create!(
     ja: Faker::Name.name,
     en: Faker::Name.name,
@@ -6,7 +6,7 @@
     description: Faker::Lorem.sentences(5))
 end
 
-99.times do |n|
+6.times do |n|
   name  = Faker::App.name
   color_code = Faker::Color.hex_color
   Project.create!(name:  name,
@@ -21,4 +21,11 @@ end
     password: "123456",
     role: rand(0..2)
     )
+end
+
+50.times do |n|
+  ProjectWord.create!(
+    project: Project.all.sample,
+    word: Word.all.sample
+  )
 end

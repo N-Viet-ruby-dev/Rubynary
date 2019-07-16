@@ -29,6 +29,7 @@ gem "font-awesome-sass", "~> 5.8.1"
 gem "faker"
 gem "roo"
 gem "roo-xls"
+gem "select_all-rails"
 
 group :development, :test do
   gem "rspec-rails", "~> 3.8"

@@ -1,0 +1,15 @@
+tr
+  td 
+    = check_box_tag "word_ids[]", word.id, false, class: "selectable"
+  td= word.vi
+  td= word.en
+  td= word.ja
+  td= word.description
+  - if word.projects.present? 
+      td
+        - word.projects.each do |f|
+          span style="color: #{f.color_code};" 
+            = f.name
+            br
+  - else
+      td None
