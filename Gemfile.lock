@@ -241,6 +241,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    select_all-rails (0.3.2)
     shoulda-matchers (4.1.0)
       activesupport (>= 4.2.0)
     slim (4.0.1)
@@ -318,6 +319,7 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails (~> 5.0)
   sassc-rails
+  select_all-rails
   shoulda-matchers
   slim-rails
   spring

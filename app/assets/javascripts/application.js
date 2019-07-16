@@ -14,23 +14,32 @@
 //= require rails-ujs
 //= require lib/jquery.dataTables.min
 //= require lib/dataTables.bootstrap4.min
+//= require lib/multiple-select.min
 //= require activestorage
 //= require toastr
 //= require bootstrap-sprockets
 //= require owl.carousel
 //= require custom
+//= require select_all.js
 
 function initDataTable(){
   $('#project').DataTable({
-   destroy: true,
-   order: []
+    destroy: true,
+    order: []
   });
 }
 
 function initDataTableUser(){
   $('#user').DataTable({
-   destroy: true,
-   order: []
+    destroy: true,
+    order: []
+  });
+}
+
+function initDataTableWordProjects(){
+  $('#word-projects').DataTable({
+    destroy: true,
+    order: []
   });
 }
 
@@ -38,6 +47,8 @@ $(document).ready(function() {
   $('#zero_config').DataTable();
   $('#project').DataTable();
   $('#user').DataTable();
+  $('#word-projects').DataTable();
   initDataTable();
   initDataTableUser();
+  initDataTableWordProjects();
 });

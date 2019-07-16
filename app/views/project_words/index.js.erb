@@ -1,0 +1,3 @@
+$("#word-projects").DataTable().clear().destroy();
+$("#word-project-table").html("<%= j render partial: 'word', collection: @words, as: :word %>");
+initDataTableWordProjects();
