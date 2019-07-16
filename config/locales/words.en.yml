@@ -13,3 +13,11 @@ en:
       vi: "VN"
       en: "EN"
       ja: "JA"
+    create:
+      file_imported: File Imported
+      not_file_selected: Not File Selected
+      error_import: Error Import
+    new:
+      import_from: Import From CSV-Excel File
+      import: Import
+      select_project: Select Project...

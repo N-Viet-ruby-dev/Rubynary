@@ -24,9 +24,15 @@ header
             ul
               - if user_signed_in?
                 li
-                  = link_to current_user.name
+                  = link_to new_word_path
+                    i.fa.fa-upload aria-hidden="true"
+                    | &ensp;
+                    = t(".import_file")
                 li
-                  = link_to t(".log_out"), destroy_user_session_path, data: { confirm: t(".sure") }, method: :delete
+                  = link_to  destroy_user_session_path, data: { confirm: t(".sure") }, method: :delete
+                    i.fa.fa-sign-out aria-hidden="true"
+                    | &ensp;
+                    = current_user.name
               - else
                 li
                   = link_to t(".log_in"), new_user_session_path

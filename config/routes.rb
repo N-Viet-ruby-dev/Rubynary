@@ -7,6 +7,5 @@ Rails.application.routes.draw do
   resources :projects
 
   get "/search", to: "words#index"
-
   root "words#index"
 end
