@@ -30,7 +30,7 @@ gem "roo"
 gem "roo-xls"
 gem "gimei"
 gem "kaminari"
-gem "select_all-rails"
+gem "select2-rails"
 
 group :development, :test do
   gem "rspec-rails", "~> 3.8"

@@ -14,13 +14,13 @@
 //= require rails-ujs
 //= require lib/jquery.dataTables.min
 //= require lib/dataTables.bootstrap4.min
-//= require lib/multiple-select.min
 //= require activestorage
 //= require toastr
 //= require bootstrap-sprockets
 //= require owl.carousel
 //= require custom
-//= require select_all.js
+//= require select2
+//= require select2-full
 
 function initDataTable(){
   $('#project').DataTable({

@@ -8,13 +8,9 @@ $(document).on("change", "#project_id", function(){
   });
 });
 
-$(function() {
-  $("#selectAll").select_all();
-});
-
-$(function () {
-  $('#projects_name').multipleSelect({
-    width: 300
+$(document).ready(function() {
+  $('.add-project').select2({
+    placeholder: "Select projects",
+    allowClear: true
   });
 });
- 
