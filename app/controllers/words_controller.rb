@@ -1,12 +1,32 @@
 # frozen_string_literal: true
 
 class WordsController < ApplicationController
-  before_action :set_search, only: %i[index]
   before_action :word_project, only: %i[create new]
-  before_action :authenticate_user!, only: %i[create new]
+  before_action :word, only: %i[destroy update edit]
+  before_action :authenticate_user!
 
   def index
-    @words_search = @search.result(distinct: true) unless params[:q].nil?
+    @search = Word.ransack(params[:q])
+    @search_words = @search.result(distinct: true).page(params[:page]).per(3) unless params[:q].nil?
+  end
+
+  def edit; end
+
+  def update
+    if @word.update(word_params.merge(last_update_by_id: current_user.id))
+      respond_to do |format|
+        format.js
+      end
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @word.destroy
+    respond_to do |format|
+      format.js
+    end
   end
 
   def new; end
@@ -25,8 +45,12 @@ class WordsController < ApplicationController
 
   private
 
-  def set_search
-    @search = Word.ransack(params[:q])
+  def word
+    @word = Word.find params[:id]
+  end
+
+  def word_params
+    params.require(:word).permit :ja, :en, :vi, :description
   end
 
   def word_project

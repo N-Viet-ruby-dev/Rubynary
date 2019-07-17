@@ -1,17 +1,20 @@
 50.times do |n|
   Word.create!(
-    ja: Faker::Name.name,
+    ja: Gimei.kanji,
     en: Faker::Name.name,
     vi: Faker::Name.name,
-    description: Faker::Lorem.sentences(5))
+    description: Faker::Lorem.sentences(2),
+    created_by_id: "1",
+    last_update_by_id: "1"
+    )
 end
 
 99.times do |n|
-  name  = Faker::App.name
-  color_code = Faker::Color.hex_color
-  Project.create!(name:  name,
-               color_code: color_code,
-               created_at: rand(2.years).seconds.ago)
+  Project.create!(
+    name: Faker::App.name,
+    color_code: Faker::Color.hex_color,
+    created_at: rand(2.years).seconds.ago
+    )
 end
 
 50.times do |n|

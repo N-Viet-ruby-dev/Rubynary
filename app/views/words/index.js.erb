@@ -1,0 +1,2 @@
+$("#words").html("<%= j render partial: 'result_search', collection: @search_words, as: :word %>");
+$("#paginator").html("<%= j paginate(@search_words, remote: true) %>");
