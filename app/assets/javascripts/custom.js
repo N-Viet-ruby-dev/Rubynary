@@ -8,11 +8,11 @@ $(document).on("change", "#project_id", function(){
   });
 });
 
- $(function() {
+$(function() {
   $("#selectAll").select_all();
 });
 
- $(function () {
+$(function () {
   $('#projects_name').multipleSelect({
     width: 300
   });
