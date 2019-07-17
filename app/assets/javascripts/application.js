@@ -19,18 +19,27 @@
 //= require bootstrap-sprockets
 //= require owl.carousel
 //= require custom
+//= require select2
+//= require select2-full
 
 function initDataTable(){
   $('#project').DataTable({
-   destroy: true,
-   order: []
+    destroy: true,
+    order: []
   });
 }
 
 function initDataTableUser(){
   $('#user').DataTable({
-   destroy: true,
-   order: []
+    destroy: true,
+    order: []
+  });
+}
+
+function initDataTableWordProjects(){
+  $('#word-projects').DataTable({
+    destroy: true,
+    order: []
   });
 }
 
@@ -38,6 +47,8 @@ $(document).ready(function() {
   $('#zero_config').DataTable();
   $('#project').DataTable();
   $('#user').DataTable();
+  $('#word-projects').DataTable();
   initDataTable();
   initDataTableUser();
+  initDataTableWordProjects();
 });

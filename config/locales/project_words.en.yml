@@ -1,0 +1,10 @@
+en:
+  project_words:
+    index:
+      all_words: "All Words"
+      none_projects: "None projects"
+      select: "Select"
+      ja: "Japanese"
+      en: "English"
+      vi: "Vietnamese"
+      add_project: Add to project

@@ -1,0 +1,25 @@
+.table-responsive
+  .container-fluid
+    = form_for :projects, remote: true do |f|
+      .col-sm-12
+        h1 = t (".all_words")
+        .select-box
+          = select_tag "project_id", options_for_select(@projects.collect{ |u| [u.name, u.id] }), remote: true, prompt: t(".none_projects")
+          = f.submit t(".add_project"), class: "add-to-project"
+          = f.select :name, @projects.map(&:name), {}, multiple: true, class: "add-project"
+        table#word-projects.table.table-striped.table-bordered
+          thead#user-thead
+            tr role="row"
+              th data-orderable="false"
+              th data-orderable="false"
+                = t (".ja")
+              th data-orderable="false"
+                = t (".vi")
+              th data-orderable="false"
+                = t (".en")
+              th data-orderable="false"
+                = t (".description")
+              th data-orderable="false"
+                = t (".project")
+          tbody#word-project-table
+            = render partial: "word", collection: @words, as: :word

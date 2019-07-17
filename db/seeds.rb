@@ -1,4 +1,4 @@
-50.times do |n|
+80.times do |n|
   Word.create!(
     ja: Gimei.kanji,
     en: Faker::Name.name,
@@ -9,7 +9,7 @@
     )
 end
 
-99.times do |n|
+10.times do |n|
   Project.create!(
     name: Faker::App.name,
     color_code: Faker::Color.hex_color,
@@ -24,4 +24,11 @@ end
     password: "123456",
     role: rand(0..2)
     )
+end
+
+50.times do |n|
+  ProjectWord.create!(
+    project: Project.all.sample,
+    word: Word.all.sample
+  )
 end
