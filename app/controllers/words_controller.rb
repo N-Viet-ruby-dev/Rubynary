@@ -6,8 +6,17 @@ class WordsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @projects = Project.all
     @search = Word.ransack(params[:q])
-    @search_words = @search.result(distinct: true).page(params[:page]).per(3) unless params[:q].nil?
+    return if params[:search_project].nil?
+
+    if params[:search_project].empty?
+      @search_words = @search.result(distinct: true).page(params[:page]).per(3)
+    else
+      project = Project.find params[:search_project]
+      search = project.words.ransack(params[:q])
+      @search_words = search.result(distinct: true).page(params[:page]).per(3)
+    end
   end
 
   def edit; end

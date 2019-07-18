@@ -3,3 +3,4 @@
     = search_form_for(@search, url: search_path) do |f|
       = f.search_field :ja_or_en_or_vi_cont, class: "form-search", placeholder: t(".your_search"), required: true, autocomplete: :off
       = f.submit t(".search"), class: "btn btn-primary"
+      = select_tag "search_project", options_for_select(@projects.collect{ |u| [u.name, u.id] }), remote: true, prompt: t(".all_projects")
