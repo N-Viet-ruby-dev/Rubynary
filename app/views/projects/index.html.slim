@@ -1,23 +1,26 @@
-h4.card-title
-  b= t(".project_management")
-span
-  = link_to t(".add_project"), new_project_url, remote: true, class: "btn btn-primary btn-sm"
-.table-project
-  table#project.table.table-striped.table-bordered style="width:100%"
-    thead
-      tr
-        th= t(".project_id")
-        th= t(".name")
-        th= t(".color")
-        th= t(".created_at")
-        th
-    tbody#project_table
-      = render partial: "project", collection: @projects
-    tfoot
-        tr
-          th= t(".project_id")
-          th= t(".name")
-          th= t(".color")
-          th= t(".created_at")
-          th
+.card
+  .card-body
+    .table-responsive
+      #zero_config_wrapper.dataTables_wrapper.container-fluid.dt-bootstrap4
+        .row
+          h4.card-title
+            b= t(".project_management")
+          .col-sm-12.new-user
+            span
+              = link_to t(".add_project"), new_project_url, remote: true, class: "btn btn-primary btn-sm buton"
+            .col-sm-12
+              table#project.table.table-striped.table-bordered.dataTable.table-hover aria-describedby="zero_config_info" role="grid" style= "text-align: center"
+                thead#user-thead
+                  tr role="row"
+                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
+                      = t(".project_id")
+                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
+                      = t(".name")
+                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
+                      = t(".color")
+                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
+                      = t(".created_at")
+                    th
+                tbody#project_table
+                  = render partial: "project", collection: @projects
 #myModal1

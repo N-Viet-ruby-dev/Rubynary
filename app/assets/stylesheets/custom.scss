@@ -13,10 +13,6 @@ thead#word {
   margin-top: 2px;
 }
 
-.btn.btn-info {
-  margin-right: 40px;
-}
-
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
@@ -172,15 +168,6 @@ body#login {
   border: 1px solid #23aade;
 }
 
-.btn-primary{
-  float: right;
-  height: 40px;
-  width: 13%;
-  font-size: 15px;
-  background-color: #23aade;
-  border-color: #23aade;
-}
-
 .btn-group{
   float: right;
 }
@@ -260,6 +247,10 @@ Collapse
 
 .table-project{
   text-align: center;
+}
+
+.buton{
+  margin: 10px;
 }
 
 #close{
