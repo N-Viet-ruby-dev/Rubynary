@@ -6,17 +6,35 @@ class WordsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    # binding.pry
     @projects = Project.all
     return if params[:q].nil?
-
     History.create keyword: params[:q], user_id: current_user.id if current_user.present? && params[:q].present?
     @words = if params[:search_project].nil?
-               Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
+                if params[:lg] == "en_cont"
+                  Word.ransack(en_cont: params[:q]).result(distinct: true)
+                elsif params[:lg] == "vi_cont"
+                  Word.ransack(vi_cont: params[:q]).result(distinct: true)
+                else
+                  Word.ransack(ja_cont: params[:q]).result(distinct: true)
+                end
+                  # Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
              else
                Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
                    .joins(:projects).where(projects: { id: params[:search_project] })
              end
              .page(params[:page]).per(3)
+    if @words.count.zero?
+      flash.now[:warning] = t(".find_result")
+    else
+      respond_to do |format|
+        format.html {}
+        format.json do
+          @words = @words.limit(4)
+          language = params[:lg]
+        end
+      end
+    end
   end
 
   def edit; end

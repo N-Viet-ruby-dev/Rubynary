@@ -21,6 +21,9 @@
 //= require custom
 //= require select2
 //= require select2-full
+//= require jquery.easy-autocomplete
+//= require search
+//= require turbolinks
 
 function initDataTable(){
   $('#project').DataTable({
@@ -51,4 +54,11 @@ $(document).ready(function() {
   initDataTable();
   initDataTableUser();
   initDataTableWordProjects();
+});
+
+$(document).on("change",".remote-input", function(){
+  var uri = $(this).data('href');
+  if (uri){
+    window.location = uri;
+  }
 });

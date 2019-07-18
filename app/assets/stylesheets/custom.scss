@@ -168,10 +168,6 @@ body#login {
   border: 1px solid #23aade;
 }
 
-.btn-group{
-  float: right;
-}
-
 .menuzord{
   background-color: #23aade;
 }
@@ -366,6 +362,40 @@ span.select2-dropdown.select2-dropdown--below{
 .modal-body-1{
   height: 500px;
   overflow-y: auto;
+
+.search-form .easy-autocomplete{
+  width: 380px !important;
+}
+
+.search-form .easy-autocomplete input{
+  width: 100% !important;
+}
+
+div#paginator {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav.pagination {
+    width: 500px;
+    margin: 0 auto;
+}
+
+span.first {
+    padding-right: 10px;
+}
+
+span.page {
+    padding-right: 10px;
+}
+
+.radio-button {
+    padding-left: 15px;
+}
+
+.btn-group {
+    padding-left: 26%;
 }
 .with-google{
   background-color: red;
