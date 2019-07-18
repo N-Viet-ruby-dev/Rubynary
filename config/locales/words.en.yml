@@ -7,9 +7,6 @@ en:
       vietnamese: "Vietnamese"
       find_result: "Result not found"
       input_word: "Please enter your key word!"
-      vi_ex: "Vietnamese : Xin chào !"
-      en_ex: "English : Hello !"
-      ja_ex: "Japanese : こんにちは !"
     result_search:
       project_name: "Project Name"
       description: "Description"
@@ -38,3 +35,7 @@ en:
     form_search:
       search: "Search"
       your_search: "Enter keyword"
+    ex_search:
+      vi_ex: "Vietnamese : Xin chào !"
+      en_ex: "English : Hello !"
+      ja_ex: "Japanese : こんにちは !"

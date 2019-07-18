@@ -30,6 +30,7 @@ gem "roo"
 gem "roo-xls"
 gem "gimei"
 gem "kaminari"
+gem "bootstrap4-kaminari-views"
 gem "select2-rails"
 
 group :development, :test do

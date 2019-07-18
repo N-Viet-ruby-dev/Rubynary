@@ -1,5 +1,5 @@
 .search-form
   .input-group
-    = search_form_for(@search, url: search_path) do |f|
-      = f.search_field :ja_or_en_or_vi_cont, class: "form-search", placeholder: t(".your_search"), required: true, autocomplete: :off
+    = form_with url: search_path, local: true, method: :get, html: { class: "form-inline my-2 my-lg-0" } do |f|
+      = f.text_field :q, placeholder: "Search", value:"#{params[:q]}" ,data: { behavior: "autocomplete" }, class: "form-control mr-sm-2"
       = f.submit t(".search"), class: "btn btn-primary"

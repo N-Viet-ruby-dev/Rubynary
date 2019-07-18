@@ -309,3 +309,30 @@ span.select2-selection.select2-selection--multiple {
   height: 100%;
   width: 400px;
 }
+
+.search-form .easy-autocomplete{
+  width: 560px !important;
+}
+
+.search-form .easy-autocomplete input{
+  width: 100% !important;
+}
+
+div#paginator {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav.pagination {
+    width: 500px;
+    margin: 0 auto;
+}
+
+span.first {
+    padding-right: 10px;
+}
+
+span.page {
+    padding-right: 10px;
+}

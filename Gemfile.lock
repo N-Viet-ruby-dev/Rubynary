@@ -54,6 +54,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
+    bootstrap4-kaminari-views (1.0.1)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     builder (3.2.3)
     coderay (1.1.2)
     coffee-rails (4.2.2)
@@ -297,6 +300,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap
+  bootstrap4-kaminari-views
   coffee-rails (~> 4.2)
   devise
   faker

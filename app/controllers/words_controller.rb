@@ -6,8 +6,21 @@ class WordsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @search = Word.ransack(params[:q])
-    @search_words = @search.result(distinct: true).page(params[:page]).per(3) unless params[:q].nil?
+    unless params[:q].present?
+      flash.now[:warning] = t(".input_word")
+    else
+      @words = Word.ransack(en_or_vi_or_ja_cont:params[:q]).result(distinct: true).page(params[:page]).per(3)
+      if @words.count == 0
+        flash.now[:warning] = t(".find_result")
+      else
+        respond_to do |format|
+          format.html{}
+          format.json{
+            @words = @words.limit(3)
+          }
+        end
+      end
+    end
   end
 
   def edit; end
