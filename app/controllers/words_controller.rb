@@ -14,8 +14,7 @@ class WordsController < ApplicationController
       @search_words = @search.result(distinct: true).page(params[:page]).per(3)
     else
       project = Project.find params[:search_project]
-      search = project.words.ransack(params[:q])
-      @search_words = search.result(distinct: true).page(params[:page]).per(3)
+      @search_words = project.words.ransack(params[:q]).result(distinct: true).page(params[:page]).per(3)
     end
   end
 
