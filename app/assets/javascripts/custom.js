@@ -13,4 +13,8 @@ $(document).ready(function() {
     placeholder: "Select projects",
     allowClear: true
   });
+  $('#search_project').select2({
+    placeholder: "All projects",
+    allowClear: true
+  });
 });
