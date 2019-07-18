@@ -20,6 +20,11 @@ header
                   i.fa.fa-user aria-hidden="true"
                   | &ensp;
                   = t(".users")
+              li
+                = link_to project_words_path
+                  i.fa.fa-plus-square aria-hidden="true"
+                  | &ensp;
+                  = t(".project_word")
           .register
             ul
               - if user_signed_in?
