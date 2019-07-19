@@ -1,13 +1,13 @@
 .content
   = render "form_search"
-  - if !@search_words.nil?
-    - if @search_words.empty?
+  - if !@words.nil?
+    - if @words.empty?
       h1.text-center = t(".find_result")
     - else
       #words
-        = render partial: "result_search", collection: @search_words, as: :word
+        = render partial: "result_search", collection: @words, as: :word
     #paginator.text-center
-      = paginate @search_words, remote: true
+      = paginate @words, remote: true
   - else
     .content-word
       #post

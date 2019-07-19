@@ -155,7 +155,6 @@ body#login {
 
 .search-form{
   margin: 0 auto;
-  width: 50%;
 }
 
 .input-group{
@@ -302,23 +301,33 @@ Collapse
   color: #fff;
   border: none;
   height: 100%;
+  margin-right: 5px;
 }
 span.select2-selection.select2-selection--multiple {
   border-radius: 0;
-  /*float: left;*/
   height: 100%;
-  /*width: 400px;*/
-  width: 150px;
+  width: 230px;
 }
 #search_project{
-  height: 40px;
   border: 1px solid #23aade;
   background: #fff;
+  border-radius: 0;
+  height: 100%;
 }
 .btn{
   border-radius: 0px !important;
 }
-#search_project{
+.search{
+  margin-left: 160px;
+  text-align: center;
+  width: 150px;
+}
+input#q{
   border-radius: 0;
-  height: 100%;
+}
+form.form-inline.my-2.my-lg-0{
+  margin: 0 auto;
+}
+span.select2-dropdown.select2-dropdown--below{
+  width: 230px !important;
 }

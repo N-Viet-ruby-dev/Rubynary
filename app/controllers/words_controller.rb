@@ -7,18 +7,15 @@ class WordsController < ApplicationController
 
   def index
     @projects = Project.all
-    @search = Word.ransack(params[:q])
     return if params[:q].nil?
 
-    if params[:search_project].nil?
-      @search_words = @search.result(distinct: true).page(params[:page]).per(3)
-    else
-      @search_words = []
-      projects = Project.find params[:search_project]
-      projects.each do |project|
-        @search_words = project.words.ransack(params[:q]).result(distinct: true).page(params[:page]).per(3)
-      end
-    end
+    @words = if params[:search_project].nil?
+               Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
+             else
+               Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
+                   .joins(:projects).where(projects: { id: params[:search_project] })
+             end
+             .page(params[:page]).per(3)
   end
 
   def edit; end
