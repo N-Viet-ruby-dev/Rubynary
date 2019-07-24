@@ -55,6 +55,7 @@ en:
         email: Email
         password: Password
         email_address: Email Address
+        login_with_google: Login with Google
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
