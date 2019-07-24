@@ -1,5 +1,0 @@
-en:
-  omniauth_callbacks:
-    google_oauth2:
-      signin_uns: "Signed in unsuccessfully."
-      dont_access: "You do not have access!"

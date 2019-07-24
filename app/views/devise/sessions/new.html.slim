@@ -21,5 +21,7 @@ body#login
             = render "devise/shared/links"
             br
             .with-google
-              = link_to user_google_oauth2_omniauth_authorize_path
+              = link_to user_google_oauth2_omniauth_authorize_path, class: "btn button-login"
+                i.fa.fa-google-plus
+                | &ensp;
                 = t(".login_with_google")
