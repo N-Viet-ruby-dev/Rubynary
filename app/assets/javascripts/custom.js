@@ -11,6 +11,11 @@ $(document).on("change", "#project_id", function(){
 $(document).ready(function() {
   $('.add-project').select2({
     placeholder: "Select projects",
-    allowClear: true
+    allowClear: true,
+    maximumSelectionLength: 2
+  });
+  $('#search_project').select2({
+    placeholder: "All projects",
+    allowClear: true,
   });
 });

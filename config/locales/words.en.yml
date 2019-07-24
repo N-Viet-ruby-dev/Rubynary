@@ -17,6 +17,7 @@ en:
       en: "English: %{word}"
       ja: "Japanese: %{word}"
       confirm: "Are you sure to delete this word ?"
+      none_project: "None project"
     create:
       file_imported: File Imported
       not_file_selected: Not File Selected
@@ -38,3 +39,4 @@ en:
     form_search:
       search: "Search"
       your_search: "Enter keyword"
+      all_project: "All project"

@@ -9,13 +9,8 @@ thead#word {
 }
 
 .action {
-  width: 210px;
-  margin-top: 243px;
-  margin-right: 5%;
   float: right;
-  position: absolute;
-  right: 20%;
-  
+  margin-top: 2px;
 }
 
 .btn.btn-info {
@@ -160,7 +155,6 @@ body#login {
 
 .search-form{
   margin: 0 auto;
-  width: 50%;
 }
 
 .input-group{
@@ -171,12 +165,11 @@ body#login {
 
 .form-search{
   height: 40px;
-  width: 85%;
+  width: 60%;
   font-size: 30px;
   text-align: center;
   float: left;
-  border: 2px solid #23aade;
-  border-radius: 10px;
+  border: 1px solid #23aade;
 }
 
 .btn-primary{
@@ -184,7 +177,6 @@ body#login {
   height: 40px;
   width: 13%;
   font-size: 15px;
-  border-radius: 3px;
   background-color: #23aade;
   border-color: #23aade;
 }
@@ -222,7 +214,6 @@ body#login {
   float: left;
   height: 90%;
   border: 1px solid #23aade;
-  border-radius: 7px;
   background-color: white;
 }
 
@@ -230,7 +221,6 @@ body#login {
   width: 49%;
   float: right;
   height: 90%;
-  border-radius: 7px;
   border: 1px solid #23aade;
   background-color: white;
 }
@@ -245,7 +235,6 @@ body#login {
   width: 60%;
   height: 300px;
   border: 1px solid #23aade;
-  border-radius: 10px;
   margin-top: 26px;
   margin-bottom: 32px;
 }
@@ -312,10 +301,33 @@ Collapse
   color: #fff;
   border: none;
   height: 100%;
+  margin-right: 5px;
 }
 span.select2-selection.select2-selection--multiple {
   border-radius: 0;
-  float: left;
   height: 100%;
-  width: 400px;
+  width: 230px;
+}
+#search_project{
+  border: 1px solid #23aade;
+  background: #fff;
+  border-radius: 0;
+  height: 100%;
+}
+.btn{
+  border-radius: 0px !important;
+}
+.search{
+  margin-left: 160px;
+  text-align: center;
+  width: 150px;
+}
+input#q{
+  border-radius: 0;
+}
+form.form-inline.my-2.my-lg-0{
+  margin: 0 auto;
+}
+span.select2-dropdown.select2-dropdown--below{
+  width: 230px !important;
 }

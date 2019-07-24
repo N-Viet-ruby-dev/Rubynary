@@ -6,8 +6,16 @@ class WordsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @search = Word.ransack(params[:q])
-    @search_words = @search.result(distinct: true).page(params[:page]).per(3) unless params[:q].nil?
+    @projects = Project.all
+    return if params[:q].nil?
+
+    @words = if params[:search_project].nil?
+               Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
+             else
+               Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
+                   .joins(:projects).where(projects: { id: params[:search_project] })
+             end
+             .page(params[:page]).per(3)
   end
 
   def edit; end

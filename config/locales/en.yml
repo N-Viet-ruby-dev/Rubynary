@@ -36,12 +36,11 @@ en:
       title:  "Ruby Nary"
     header:
       search: "Search"
-      list_words: "List words"
-      list_users: "List users"
       log_in: "Log In"
       sign_up: "Sign up"
       log_out: "Log Out"
       projects: Projects
       users: Users
+      project_word: "Project word"
       sure: Sure?
       import_file: Import File

@@ -1,7 +1,14 @@
 .content-word
   #post
     ul.list-group.list-group-flush
-      li.list-group-item.project-name = t(".project_name")
+      li.list-group-item.project-name
+        - if word.projects.present? 
+          - word.projects.each do |f|
+            span style="color: #{f.color_code};" 
+              = f.name
+              | &ensp;
+        - else
+            = t(".none_project")
       li.list-group-item
         = t(".ja", word: word.ja)
       li.list-group-item
