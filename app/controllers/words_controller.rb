@@ -9,6 +9,7 @@ class WordsController < ApplicationController
     @projects = Project.all
     return if params[:q].nil?
 
+    History.create keyword: params[:q], user_id: current_user.id if current_user.present? && params[:q].present?
     @words = if params[:search_project].nil?
                Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
              else
