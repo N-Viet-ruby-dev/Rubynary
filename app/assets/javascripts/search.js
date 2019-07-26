@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function () {
+$(document).ready(function () {
   $input = $("[data-behavior='autocomplete']")
 
   var options = {
@@ -8,7 +8,7 @@ $(document).on('turbolinks:load', function () {
     },
     categories: [
       {
-        listLocation: "words",
+        listLocation: "words"
       }
     ]
   }

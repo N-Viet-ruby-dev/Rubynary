@@ -6,8 +6,9 @@
     - else
       #words
         = render partial: "result_search", collection: @words, as: :word
-        #paginator
-          = paginate @words, theme: "twitter-bootstrap-4"
+      #paginator
+        .container.pagination.justify-content-center
+          = paginate @words, theme: "twitter-bootstrap-4", remote: true
   - else
     = render "ex_search"
 #modal1

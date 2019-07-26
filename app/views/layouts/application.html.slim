@@ -7,7 +7,7 @@ html
     = csp_meta_tag
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload"
     = javascript_include_tag "application", "data-turbolinks-track": "reload"
-  body data-turbolinks="false"
+  body
     - if controller.controller_name == "sessions"
       - flash.each do |f|
         - type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info')
