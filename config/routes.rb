@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :projects
   resources :project_words
+  resources :histories, only: :index
 
   get "/search", to: "words#index"
   root "words#index"

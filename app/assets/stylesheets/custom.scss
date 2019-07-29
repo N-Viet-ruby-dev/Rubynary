@@ -322,3 +322,48 @@ form.form-inline.my-2.my-lg-0{
 span.select2-dropdown.select2-dropdown--below{
   width: 230px !important;
 }
+
+.history-item {
+  padding-top: .5em;
+  border-bottom: 1px solid #c5c5c5;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  cursor: pointer;
+}
+
+.history-type[value="w"] {
+  background-color: orange;
+}
+
+.history-type {
+  height: 32px;
+  width: 32px;
+  background-color: orange;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  float: left;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 14px;
+}
+
+.his-content {
+  line-height: 32px;
+  padding-left: 40px;
+  color: rgba(0,0,0,.7);
+}
+
+.his-time {
+  font-size: 10px;
+  text-align: right;
+  padding-right: 4px;
+}
+.modal-dialog{
+  overflow-y: initial !important
+}
+
+.modal-body-1{
+  height: 500px;
+  overflow-y: auto;
+}

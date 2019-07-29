@@ -1,0 +1,16 @@
+#myModal.modal.fade.bd-example-modal-lg aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h4
+          b= t(".searching_history")
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  ×
+      .modal-body-1
+          - histories.each do |history|
+            .history-item
+              .history-type value="w" w
+              .his-content
+                = history.keyword
+              .his-time
+                = l(history.created_at)
