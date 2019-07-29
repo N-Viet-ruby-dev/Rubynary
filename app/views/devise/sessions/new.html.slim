@@ -19,3 +19,9 @@ body#login
               .actions
                 = f.submit t(".sign_in"), class: "btn btn-lg btn-info btn-block btn-login text-uppercase font-weight-bold mb-2"
             = render "devise/shared/links"
+            br
+            .with-google
+              = link_to user_google_oauth2_omniauth_authorize_path, class: "btn button-login"
+                i.fa.fa-google-plus
+                | &ensp;
+                = t(".login_with_google")

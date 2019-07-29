@@ -27,3 +27,6 @@
 /config/master.key
 /config/database.yml
 /vendor/cache
+
+# Ignore application configuration
+/config/application.yml

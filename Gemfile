@@ -32,6 +32,9 @@ gem "gimei"
 gem "kaminari"
 gem "select2-rails"
 gem "whenever", require: false
+gem "omniauth-google-oauth2"
+gem "figaro"
+
 group :development, :test do
   gem "rspec-rails", "~> 3.8"
   gem "rubocop-rails", require: false
