@@ -10,7 +10,6 @@ class WordsController < ApplicationController
     @projects = Project.all
     return if params[:q].nil?
 
-    History.create keyword: params[:q], user_id: current_user.id if current_user.present? && params[:q].present?
     @words = if params[:search_project].nil?
                Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
              else
@@ -18,6 +17,7 @@ class WordsController < ApplicationController
                    .joins(:projects).where(projects: { id: params[:search_project] })
              end
              .page(params[:page]).per(3)
+
     if @words.empty?
       flash.now[:warning] = t(".find_result")
     else
@@ -28,6 +28,11 @@ class WordsController < ApplicationController
           @words = @words.limit(LIMIT_SUGGESTIONS)
         end
       end
+    end
+
+    if params[:commit].present?
+      @history = History.find_or_create_by(keyword: params[:q], user_id: current_user.id)
+      params[:search_project]&.map { |id| ProjectHistory.find_or_create_by(history_id: @history.id, project_id: id) }
     end
   end
 

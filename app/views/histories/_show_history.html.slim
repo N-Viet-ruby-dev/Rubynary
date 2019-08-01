@@ -11,6 +11,15 @@
             .history-item
               .history-type value="w" w
               .his-content
-                = history.keyword
+                .his-keyword
+                  = history.keyword
+                .his-project
+                  - if history.projects.present?
+                    - history.projects.each do |f|
+                      span style="color: #{f.color_code};" 
+                        | &ensp;
+                        = f.name
+                  - else
+                    | &ensp;
               .his-time
-                = l(history.created_at)
+                = history.created_at.utc.localtime.strftime("%d/%m/%Y, %H:%M")
