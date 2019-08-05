@@ -21,6 +21,8 @@
 //= require custom
 //= require select2
 //= require select2-full
+//= require jquery.easy-autocomplete
+//= require search
 
 function initDataTable(){
   $('#project').DataTable({

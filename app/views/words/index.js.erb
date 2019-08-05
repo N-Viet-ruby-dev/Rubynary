@@ -1,2 +1,2 @@
 $("#words").html("<%= j render partial: 'result_search', collection: @words, as: :word %>");
-$("#paginator").html("<%= j paginate(@words, remote: true) %>");
+$(".justify-content-center").html("<%= j paginate(@words, remote: true, theme: 'twitter-bootstrap-4') %>");

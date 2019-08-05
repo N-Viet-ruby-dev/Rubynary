@@ -54,6 +54,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
+    bootstrap4-kaminari-views (1.0.1)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     builder (3.2.3)
     chronic (0.10.2)
     coderay (1.1.2)
@@ -296,9 +299,6 @@ GEM
     tilt (2.0.9)
     toastr-rails (1.0.3)
       railties (>= 3.1.0)
-    turbolinks (5.2.0)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
@@ -323,6 +323,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap
+  bootstrap4-kaminari-views
   coffee-rails (~> 4.2)
   devise
   faker
@@ -354,7 +355,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   toastr-rails
-  turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)

@@ -8,7 +8,7 @@
               = f.name
               | &ensp;
         - else
-            = t(".none_project")
+          = t(".none_project")
       li.list-group-item
         = t(".ja", word: word.ja)
       li.list-group-item
@@ -17,10 +17,10 @@
         = t(".vi", word: word.vi)
   #sidebar
     h4.description
-      strong= t(".description")
-      .description
-        = simple_format(word.description)
+      = raw t(".description")
+    .description
+      = simple_format(word.description)
   .action
-    = link_to t(".edit"), edit_word_path(word), class: "btn btn-info", remote: true
+    = link_to t(".edit"), edit_word_path(word), class: "btn btn-info", id: "btn-info-edit", remote: true
     = link_to t(".delete"), word, class: "btn btn-danger", method: :delete, data: { confirm: t(".confirm") }, remote: true, id: "word_delete"
 #myModalIndex

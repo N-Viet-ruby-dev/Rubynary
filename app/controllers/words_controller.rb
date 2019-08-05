@@ -4,6 +4,7 @@ class WordsController < ApplicationController
   before_action :word_project, only: %i[create new]
   before_action :word, only: %i[destroy update edit]
   before_action :authenticate_user!
+  LIMIT_SUGGESTIONS = 9
 
   def index
     @projects = Project.all
@@ -17,6 +18,17 @@ class WordsController < ApplicationController
                    .joins(:projects).where(projects: { id: params[:search_project] })
              end
              .page(params[:page]).per(3)
+    if @words.empty?
+      flash.now[:warning] = t(".find_result")
+    else
+      respond_to do |format|
+        format.html {}
+        format.js
+        format.json do
+          @words = @words.limit(LIMIT_SUGGESTIONS)
+        end
+      end
+    end
   end
 
   def edit; end

@@ -7,12 +7,9 @@ en:
       vietnamese: "Vietnamese"
       find_result: "Result not found"
       input_word: "Please enter your key word!"
-      vi_ex: "Vietnamese : Xin chào !"
-      en_ex: "English : Hello !"
-      ja_ex: "Japanese : こんにちは !"
     result_search:
       project_name: "Project Name"
-      description: "Description"
+      description: "<strong>Description : </strong>"
       vi: "Vietnamese: %{word}"
       en: "English: %{word}"
       ja: "Japanese: %{word}"
@@ -26,7 +23,7 @@ en:
       import_from: Import From CSV-Excel File
       import: Import
       select_project: Select Project...
-      description: "Description: "
+      description: "<strong>Description : </strong> "
       vi: "Vietnamese: %{word}"
       en: "English: %{word}"
       ja: "Japanese: %{word}"
@@ -40,3 +37,8 @@ en:
       search: "Search"
       your_search: "Enter keyword"
       all_project: "All project"
+    ex_search:
+      vi_ex: "Vietnamese: Xin chào !"
+      en_ex: "English: Hello !"
+      ja_ex: "Japanese: こんにちは !"
+      description: "<strong>Description : </strong>"
