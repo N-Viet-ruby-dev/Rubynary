@@ -18,7 +18,8 @@ class WordsController < ApplicationController
                    .joins(:projects).where(projects: { id: params[:search_project] })
              end
              .page(params[:page]).per(3)
-    if @words.empty? flash.now[:warning] = t(".find_result")
+    if @words.empty?
+      flash.now[:warning] = t(".find_result")
     else
       respond_to do |format|
         format.html {}

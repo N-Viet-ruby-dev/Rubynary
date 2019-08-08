@@ -1,0 +1,8 @@
+tr
+  td= suggested_word.ja
+  td= suggested_word.vi
+  td= suggested_word.en
+  td= suggested_word.description
+  td= suggested_word.status
+  td= link_to suggested_word_path(suggested_word), method: :delete, data: {confirm: "Delete this word ?"}, remote: true do
+    = button_tag "delete", class: "btn btn-warning"

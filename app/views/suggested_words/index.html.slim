@@ -1,0 +1,20 @@
+.table-responsive
+  .container-fluid
+    .col-sm-12
+      h1 = t(".lwedit")
+      table#suggested-word.table.table-striped.table-bordered
+        thead#user-thead
+          tr role="row"
+            th data-orderable="true"
+              = t(".ja")
+            th data-orderable="true"
+              = t(".en")
+            th data-orderable="true"
+              = t(".vi")
+            th data-orderable="true"
+              = t(".description")
+            th data-orderable="true"
+              = t(".status")
+            th= t(".delete")
+        tbody#suggested-word-table
+          = render partial: "suggested_word", collection: @suggested_words, as: :suggested_word

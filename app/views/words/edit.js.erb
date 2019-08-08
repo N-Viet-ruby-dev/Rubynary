@@ -2,6 +2,5 @@ $("#myModalIndex").html("<%= j render 'edit', word: @word %>");
 $("#myModalEdit").modal("show");
 $("#save").click(function() {
   $("#myModalEdit").modal("hide");
-  window.location.assign("");
-  toastr["success"]("Update word successfully!");
+  toastr["success"]("The revision has been added to the update waiting list!");
 });
