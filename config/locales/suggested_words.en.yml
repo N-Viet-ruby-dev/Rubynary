@@ -1,0 +1,11 @@
+en:
+  suggested_words:
+    index:
+      lwedit: "List words edit"
+      ja: "Japanese"
+      en: "English"
+      vi: "Vietnamese"
+      description: "Description"
+      status: "Status"
+      delete: "Delete"
+      

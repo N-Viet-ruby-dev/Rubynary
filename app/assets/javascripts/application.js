@@ -45,12 +45,21 @@ function initDataTableWordProjects(){
   });
 }
 
+function initDataTableSuggestedWord(){
+  $('#suggested-word').DataTable({
+    destroy: true,
+    order: []
+  });
+}
+
 $(document).ready(function() {
   $('#zero_config').DataTable();
   $('#project').DataTable();
   $('#user').DataTable();
   $('#word-projects').DataTable();
+  $('#suggested-word').DataTable();
   initDataTable();
   initDataTableUser();
   initDataTableWordProjects();
+  initDataTableSuggestedWord();
 });

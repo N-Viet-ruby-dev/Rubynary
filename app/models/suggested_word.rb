@@ -4,6 +4,6 @@ class SuggestedWord < ApplicationRecord
   validates :ja, presence: true
   validates :en, presence: true
   validates :vi, presence: true
-  belong_to :word
+  belongs_to :word
   enum status: %i[waiting approved disapproved]
 end

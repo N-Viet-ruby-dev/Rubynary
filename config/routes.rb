@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :projects
   resources :project_words
   resources :histories, only: :index
+  resources :suggested_words
 
   get "/search", to: "words#index"
   root "words#index"

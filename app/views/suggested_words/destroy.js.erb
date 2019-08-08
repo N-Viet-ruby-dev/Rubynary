@@ -1,0 +1,4 @@
+$("#suggested-word").DataTable().clear().destroy(false);
+$("#suggested-word-table").html("<%= j render partial: 'suggested_word', collection: @suggested_words %>")
+toastr["success"] = "Delete success!"
+initDataTable();
