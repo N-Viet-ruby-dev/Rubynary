@@ -30,7 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: Hello world
+  hello: "Hello world"
   layouts:
     application:
       title:  "Ruby Nary"
@@ -39,8 +39,9 @@ en:
       log_in: "Log In"
       sign_up: "Sign up"
       log_out: "Log Out"
-      projects: Projects
-      users: Users
+      projects: "Projects"
+      users: "Users"
       project_word: "Project word"
-      sure: Sure?
-      import_file: Import File
+      sure: "Sure?"
+      import_file: "Import File"
+      my_list_edit: "My list edit"

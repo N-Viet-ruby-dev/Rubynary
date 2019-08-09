@@ -8,4 +8,6 @@ en:
       description: "Description"
       status: "Status"
       delete: "Delete"
-      
+    suggested_word:
+      delete_question: "Delete word ! You sure ?"
+      delete: "Delete"

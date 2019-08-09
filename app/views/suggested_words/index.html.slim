@@ -13,8 +13,8 @@
               = t(".vi")
             th data-orderable="true"
               = t(".description")
-            th data-orderable="true"
+            th.text-center data-orderable="true"
               = t(".status")
-            th= t(".delete")
+            th.text-center= t(".delete")
         tbody#suggested-word-table
           = render partial: "suggested_word", collection: @suggested_words, as: :suggested_word

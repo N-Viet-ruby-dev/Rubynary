@@ -28,7 +28,8 @@ header
               li
                 = link_to suggested_words_path
                   i.fa.fa-edit aria-hidden="true"
-                  | &ensp; My edit list
+                  | &ensp;
+                  = t(".my_list_edit")
           .register
             ul
               - if user_signed_in?
