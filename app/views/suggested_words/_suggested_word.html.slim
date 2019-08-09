@@ -3,6 +3,12 @@ tr
   td= suggested_word.vi
   td= suggested_word.en
   td= suggested_word.description
-  td= suggested_word.status
-  td= link_to suggested_word_path(suggested_word), method: :delete, data: {confirm: "Delete this word ?"}, remote: true do
-    = button_tag "delete", class: "btn btn-warning"
+  td.text-center
+    - if suggested_word.status == "waiting"
+      i.fa.fa-spinner.waiting
+    - elsif suggested_word.status == "disapproved"
+      i.fa.fa-times.disapproved
+    - else
+      i.fa.fa-check.approved
+  td.text-center= link_to t(".delete"), suggested_word, method: :delete,
+    data: { confirm: t(".delete_question") }, remote: true, class: "suggested_word_delete"

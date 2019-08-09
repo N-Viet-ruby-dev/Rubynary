@@ -1,4 +1,4 @@
-$("#suggested-word").DataTable().clear().destroy(false);
-$("#suggested-word-table").html("<%= j render partial: 'suggested_word', collection: @suggested_words %>")
-toastr["success"] = "Delete success!"
-initDataTable();
+$('.suggested_word_delete').bind('ajax:success', function() {
+  $(this).closest('tr').fadeOut();
+});
+toastr["info"]("Delete word successfully !");
