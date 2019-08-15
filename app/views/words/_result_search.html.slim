@@ -21,6 +21,9 @@
     .description
       = simple_format(word.description)
   .action
-    = link_to t(".edit"), edit_word_path(word), class: "btn btn-info", id: "btn-info-edit", remote: true
-    = link_to t(".delete"), word, class: "btn btn-danger", method: :delete, data: { confirm: t(".confirm") }, remote: true, id: "word_delete"
+    - if word.suggested_words.last.present? && word.suggested_words.last.status == "waiting"
+      = link_to "Can't edit", "#", class: "btn btn-warning"
+    - else
+      = link_to t(".edit"), edit_word_path(word), class: "btn btn-info", id: "btn-info-edit", remote: true
+    = link_to t(".delete"), word, class: "btn btn-danger delete", method: :delete, data: { confirm: t(".confirm") }, remote: true, id: "word_delete"
 #myModalIndex

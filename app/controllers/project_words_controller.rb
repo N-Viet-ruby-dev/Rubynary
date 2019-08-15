@@ -25,6 +25,11 @@ class ProjectWordsController < ApplicationController
     @words = Word.order(created_at: :desc)
   end
 
+  def edit
+    @word = Word.find params[:id]
+    @suggested_word = @word.suggested_words.last
+  end
+
   private
 
   def none_project

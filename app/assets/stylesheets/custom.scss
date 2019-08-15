@@ -21,7 +21,7 @@ a#word_delete {
 }
 
 #btn-info-edit {
-  width: 35%;
+  width: 50%;
 }
 
 :root {
@@ -279,6 +279,11 @@ Collapse
   color: #fff;
 }
 
+#word-title{
+  background-color: #23aade;
+  color: #fff;
+}
+
 .select-box{
   width: 100%;
   height: 40px;
@@ -439,4 +444,16 @@ i.fa.fa-times.disapproved {
 
 i.fa.fa-check.approved {
   color: #07f53e;
+}
+
+.col-md-6.suggested-word {
+  float: right;
+}
+
+.col-md-6.word {
+  float: left;
+}
+
+input#disapproval {
+  float: right;
 }

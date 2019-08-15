@@ -1,0 +1,10 @@
+$("#myModalIndex1").html("<%= j render 'approval', word: @word %>");
+$("#myModalApproval").modal("show");
+
+$("#disapproval").click(function() {
+  toastr["error"]("Word disapproved !");
+});
+
+$("#approval").click(function() {
+  toastr["success"]("Word approved !");
+});

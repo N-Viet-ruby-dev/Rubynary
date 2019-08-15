@@ -20,7 +20,6 @@ class SuggestedWordsController < ApplicationController
     @suggested_word = SuggestedWord.find params[:id]
     @suggested_word.destroy
     respond_to do |format|
-      format.html
       format.js
     end
   end

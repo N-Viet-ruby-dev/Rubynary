@@ -1,0 +1,5 @@
+$("#word-projects").DataTable().clear().destroy();
+$("#word-title").html("<%= j render partial: 'project_words/word_title'%>");
+$("#word-project-table").html("<%= j render partial: 'project_words/word', collection: @words %>");
+$("#myModalApproval").modal("hide");
+initDataTableWordProjects();
