@@ -1,0 +1,15 @@
+tr role="row"
+  th data-orderable="false"
+  th data-orderable="true"
+    = t(".ja")
+  th data-orderable="true"
+    = t(".en")
+  th data-orderable="true"
+    = t(".vi")
+  th data-orderable="false"
+    = t(".description")
+  th data-orderable="true"
+    = t(".project")
+  - if SuggestedWord.where(status: "waiting").count != 0
+    th data-orderable="true"
+      = t(".update") + "(#{SuggestedWord.where(status: "waiting").count})"

@@ -15,6 +15,7 @@
               = t(".description")
             th.text-center data-orderable="true"
               = t(".status")
-            th.text-center= t(".delete")
+            th.text-center data-orderable="false"
+              = t(".delete")
         tbody#suggested-word-table
           = render partial: "suggested_word", collection: @suggested_words, as: :suggested_word

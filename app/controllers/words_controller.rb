@@ -34,12 +34,19 @@ class WordsController < ApplicationController
   def edit; end
 
   def update
-    if @word.update(word_params.merge(last_update_by_id: current_user.id))
+    @words = Word.all
+    suggested_word = @word.suggested_words.last
+    if params[:approval] == "approval"
+      suggested_word.update(status: 1)
+      @word.update(word_params.merge(last_update_by_id: suggested_word.created_by_id))
       respond_to do |format|
         format.js
       end
     else
-      render :edit
+      suggested_word.update(status: 2)
+      respond_to do |format|
+        format.js
+      end
     end
   end
 
@@ -71,7 +78,7 @@ class WordsController < ApplicationController
   end
 
   def word_params
-    params.require(:word).permit :ja, :en, :vi, :description
+    params.require(:suggested_word).permit :ja, :en, :vi, :description
   end
 
   def word_project

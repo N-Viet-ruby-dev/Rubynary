@@ -2,14 +2,19 @@ tr
   td 
     = check_box_tag "word_ids[]", word.id, false, class: "selectable"
   td= word.ja
-  td= word.vi
   td= word.en
+  td= word.vi
   td= word.description
   - if word.projects.present? 
-      td
-        - word.projects.each do |f|
-          span style="color: #{f.color_code};" 
-            = f.name
-            br
+    td
+      - word.projects.each do |f|
+        span style="color: #{f.color_code};" 
+          = f.name
+          br
   - else
-      td None
+    td= t(".none")
+  - if SuggestedWord.where(status: "waiting").count != 0
+    td.text-center
+      - if word.suggested_words.present?
+        - if word.suggested_words.last.status == "waiting"
+          = link_to t(".check"), edit_project_word_path(word), remote: true
