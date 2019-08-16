@@ -2,7 +2,7 @@
 
 class SuggestedWordsController < ApplicationController
   def index
-    @suggested_words = SuggestedWord.order(status: :desc)
+    @suggested_words = SuggestedWord.where(created_by_id: current_user.id).order(status: :desc)
   end
 
   def new

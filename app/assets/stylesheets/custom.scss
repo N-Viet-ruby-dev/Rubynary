@@ -16,12 +16,17 @@ thead#word {
 }
 
 a#word_delete {
-  float: right;
-  width: 35%;
+  width: 49%;
 }
 
 #btn-info-edit {
-  width: 50%;
+  float: right;
+  width: 49%;
+}
+
+a.btn.btn-warning.edit {
+  float: right;
+  width: 49%;
 }
 
 :root {
