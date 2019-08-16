@@ -13,8 +13,6 @@ tr
           br
   - else
     td= t(".none")
-  - if SuggestedWord.where(status: "waiting").count != 0
-    td.text-center
-      - if word.suggested_words.present?
-        - if word.suggested_words.last.status == "waiting"
-          = link_to t(".check"), edit_project_word_path(word), remote: true
+  td.text-center
+    - if word.suggested_words.present? && word.suggested_words.last.status == "waiting"
+      = link_to t(".check"), edit_project_word_path(word), title: "#{User.find(word.suggested_words.last.created_by_id).name}", remote: true

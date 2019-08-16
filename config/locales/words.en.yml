@@ -15,6 +15,9 @@ en:
       ja: "Japanese: %{word}"
       confirm: "Are you sure to delete this word ?"
       none_project: "None project"
+      can_not_edit: "Can't edit"
+      delete: "Delete"
+      notifications_waiting_for_editing: "This word is pending approval, please wait !"
     create:
       file_imported: File Imported
       not_file_selected: Not File Selected

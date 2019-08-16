@@ -1,7 +1,7 @@
 en:
   suggested_words:
     index:
-      lwedit: "List words edit"
+      list_word_edit: "List words edit"
       ja: "Japanese"
       en: "English"
       vi: "Vietnamese"

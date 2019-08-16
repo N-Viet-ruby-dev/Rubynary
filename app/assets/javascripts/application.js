@@ -41,7 +41,7 @@ function initDataTableUser(){
 function initDataTableWordProjects(){
   $('#word-projects').DataTable({
     destroy: true,
-    order: []
+    order: [[ 6, "desc" ]]
   });
 }
 
