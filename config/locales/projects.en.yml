@@ -7,6 +7,7 @@ en:
       name: Name
       color: Color
       created_at: Created_At
+      delete: Delete
     new:
       add_new_project: Add New Project
       submit: Submit

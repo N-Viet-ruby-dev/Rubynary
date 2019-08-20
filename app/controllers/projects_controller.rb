@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ProjectsController < ApplicationController
+  before_action :check_lead_comtor
+
   def index
     @projects = Project.all
   end

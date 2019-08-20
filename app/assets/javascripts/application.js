@@ -43,7 +43,7 @@ function initDataTableWordProjects(){
     destroy: true,
     order: [[ 6, "desc" ]]
   });
-}
+  }
 
 function initDataTableSuggestedWord(){
   $('#suggested-word').DataTable({

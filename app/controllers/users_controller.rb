@@ -2,6 +2,7 @@
 
 class UsersController < ApplicationController
   before_action :user, only: %i[edit update destroy]
+  before_action :check_lead_comtor
 
   def index
     @users = User.order(created_at: :desc)

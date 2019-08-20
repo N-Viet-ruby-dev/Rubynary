@@ -3,6 +3,7 @@
 class WordsController < ApplicationController
   before_action :word_project, only: %i[create new]
   before_action :word, only: %i[destroy update edit]
+  before_action :check_lead_comtor, only: %i[destroy]
   LIMIT_SUGGESTIONS = 9
 
   def index
@@ -33,20 +34,20 @@ class WordsController < ApplicationController
   def edit; end
 
   def update
-    @words = Word.all
-    suggested_word = @word.suggested_words.last
-    if params[:approval] == "approval"
-      suggested_word.update(status: 1)
-      @word.update(word_params.merge(last_update_by_id: suggested_word.created_by_id))
-      respond_to do |format|
-        format.js
+      @words = Word.all
+      suggested_word = @word.suggested_words.last
+      if params[:approval] == "approval"
+        suggested_word.update(status: 1)
+        @word.update(word_params.merge(last_update_by_id: suggested_word.created_by_id))
+        respond_to do |format|
+          format.js
+        end
+      else
+        suggested_word.update(status: 2)
+        respond_to do |format|
+          format.js
+        end
       end
-    else
-      suggested_word.update(status: 2)
-      respond_to do |format|
-        format.js
-      end
-    end
   end
 
   def destroy
@@ -56,17 +57,23 @@ class WordsController < ApplicationController
     end
   end
 
-  def new; end
+  def new
+    if current_user.developer?
+      redirect_to :root
+    end
+  end
 
   def create
-    flash.now[:warning] = t(".not_file_selected") unless params[:file].present?
-    response = ImportWords.perform params[:file], params[:project_ids], current_user.id
-    if response
-      flash[:success] = t(".file_imported")
-      redirect_to root_path
-    else
-      flash.now[:error] = t(".error_import")
-      render :new
+    if !current_user.developer?
+      flash.now[:warning] = t(".not_file_selected") unless params[:file].present?
+      response = ImportWords.perform params[:file], params[:project_ids], current_user.id
+      if response
+        flash[:success] = t(".file_imported")
+        redirect_to root_path
+      else
+        flash.now[:error] = t(".error_import")
+        render :new
+      end
     end
   end
 
