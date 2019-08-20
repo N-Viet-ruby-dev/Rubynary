@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class ProjectWordsController < ApplicationController
-  before_action :authenticate_user!
-
   def index
     @projects = Project.all
     @words = none_project
