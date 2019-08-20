@@ -3,7 +3,6 @@
 class WordsController < ApplicationController
   before_action :word_project, only: %i[create new]
   before_action :word, only: %i[destroy update edit]
-  before_action :authenticate_user!
   LIMIT_SUGGESTIONS = 9
 
   def index
