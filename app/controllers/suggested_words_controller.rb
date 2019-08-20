@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class SuggestedWordsController < ApplicationController
+  before_action :check_developer
+
   def index
     @suggested_words = SuggestedWord.where(created_by_id: current_user.id).order(status: :desc)
   end

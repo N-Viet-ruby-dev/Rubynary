@@ -20,7 +20,8 @@
                       = t(".color")
                     th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
                       = t(".created_at")
-                    th
+                    th.text-center data-orderable="false"
+                      = t(".delete")
                 tbody#project_table
                   = render partial: "project", collection: @projects
 #myModal1

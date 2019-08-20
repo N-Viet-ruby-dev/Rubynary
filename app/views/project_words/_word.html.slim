@@ -14,5 +14,5 @@ tr
   - else
     td= t(".none")
   td.text-center
-    - if word.suggested_words.present? && word.suggested_words.last.status == "waiting"
+    - if word.suggested_words.present? && word.suggested_words.last.status == "waiting" && current_user.lead_comtor?
       = link_to t(".check"), edit_project_word_path(word), title: "#{User.find(word.suggested_words.last.created_by_id).name}", remote: true
