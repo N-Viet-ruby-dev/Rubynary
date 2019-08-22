@@ -6,4 +6,5 @@ class Word < ApplicationRecord
   validates :vi, presence: true
   has_many :project_words, dependent: :destroy
   has_many :projects, through: :project_words, dependent: :destroy
+  has_many :suggested_words, dependent: :destroy
 end
