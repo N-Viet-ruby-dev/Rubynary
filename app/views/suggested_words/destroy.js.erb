@@ -1,0 +1,4 @@
+$('.suggested_word_delete').bind('ajax:success', function() {
+  $(this).closest('tr').fadeOut();
+});
+toastr["success"]("Delete word successfully !");

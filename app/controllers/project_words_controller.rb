@@ -6,7 +6,7 @@ class ProjectWordsController < ApplicationController
   def index
     @projects = Project.all
     @words = none_project
-    @words = Word.order(created_at: :desc) if params[:project].nil?
+    @words = Word.all if params[:project].nil?
     @words = Project.find(params[:project]).words if params[:project].present?
   end
 
@@ -23,6 +23,11 @@ class ProjectWordsController < ApplicationController
       end
     end
     @words = Word.order(created_at: :desc)
+  end
+
+  def edit
+    @word = Word.find params[:id]
+    @suggested_word = @word.suggested_words.last
   end
 
   private

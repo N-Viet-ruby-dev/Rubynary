@@ -7,4 +7,14 @@ en:
       ja: "Japanese"
       en: "English"
       vi: "Vietnamese"
-      add_project: Add to project
+      add_project: "Add to project"
+      update: "Update"
+    approval:
+      check_for_update: "Check for update"
+      original: "Original"
+      approval: "Approval"
+      disapproval: "Disapproval"
+      modified_records: "Modified records"
+    word:
+      none: "None"
+      check: "Check"

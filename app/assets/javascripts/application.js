@@ -41,6 +41,13 @@ function initDataTableUser(){
 function initDataTableWordProjects(){
   $('#word-projects').DataTable({
     destroy: true,
+    order: [[ 6, "desc" ]]
+  });
+}
+
+function initDataTableSuggestedWord(){
+  $('#suggested-word').DataTable({
+    destroy: true,
     order: []
   });
 }
@@ -50,7 +57,9 @@ $(document).ready(function() {
   $('#project').DataTable();
   $('#user').DataTable();
   $('#word-projects').DataTable();
+  $('#suggested-word').DataTable();
   initDataTable();
   initDataTableUser();
   initDataTableWordProjects();
+  initDataTableSuggestedWord();
 });

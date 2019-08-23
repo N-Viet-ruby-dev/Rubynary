@@ -1,0 +1,13 @@
+en:
+  suggested_words:
+    index:
+      list_word_edit: "List words edit"
+      ja: "Japanese"
+      en: "English"
+      vi: "Vietnamese"
+      description: "Description"
+      status: "Status"
+      delete: "Delete"
+    suggested_word:
+      delete_question: "Delete word ! You sure ?"
+      delete: "Delete"

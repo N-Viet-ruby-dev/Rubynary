@@ -1,0 +1,43 @@
+#myModalApproval.modal.fade.bd-example-modal-lg aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h2.text-center= t(".check_for_update")
+        button#close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  ×
+      .modal-body
+        .col-md-6.word
+          h5.text-center= t(".original")
+          = form_for word, remote: true do |f|
+            = f.hidden_field :id, class: "form-control"
+            .form-group
+              = f.label :ja
+              = f.text_field :ja, class: "form-control", disabled: true
+            .form-group
+              = f.label :en
+              = f.text_field :en, class: "form-control", disabled: true
+            .form-group
+              = f.label :vi
+              = f.text_field :vi, class: "form-control", disabled: true
+            .form-group
+              = f.label :description
+              = f.text_area  :description, class: "form-control", disabled: true
+        .col-md-6.suggested-word
+          h5.text-center= t(".modified_records")
+          = form_for @suggested_word, url: word_path, method: :patch, remote: true do |s|
+            = s.hidden_field :word_id, class: "form-control"
+            .form-group
+              = s.label :ja
+              = s.text_field :ja, class: "form-control", readonly: true
+            .form-group
+              = s.label :en
+              = s.text_field :en, class: "form-control", readonly: true
+            .form-group
+              = s.label :vi
+              = s.text_field :vi, class: "form-control", readonly: true
+            .form-group
+              = s.label :description
+              = s.text_area  :description, class: "form-control", readonly: true
+            .form-group
+              = s.submit t(".approval"), id: "approval", name: "approval", value: "approval", class: "btn btn-primary"
+              = s.submit t(".disapproval"), id: "disapproval", name: "approval", value: "disapproval", class: "btn btn-danger"
