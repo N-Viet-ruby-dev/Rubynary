@@ -2,3 +2,4 @@ en:
   histories:
     show_history:
       searching_history: Searching History
+      delete: Delete this keyword from search history, sure ?

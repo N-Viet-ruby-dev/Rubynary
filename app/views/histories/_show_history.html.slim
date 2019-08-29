@@ -2,15 +2,20 @@
   .modal-dialog.modal-lg
     .modal-content
       .modal-header
-        h4
-          b= t(".searching_history")
+        h4= t(".searching_history")
         button.close aria-label="Close" data-dismiss="modal" type="button"
           span aria-hidden="true"  ×
       .modal-body-1
+        table.table.table-hover.history-item
           - histories.each do |history|
-            .history-item
-              .history-type value="w" w
-              .his-content
-                = history.keyword
-              .his-time
-                = l(history.created_at)
+            tbody
+              tr
+                td.text-center
+                  i.fa.fa-history.fa-2x
+                td= link_to "#{history.keyword.truncate(20)}", search_path(q: history.keyword)
+                td
+                  - history.projects.each do |f|
+                    span style="color: #{f.color_code};"
+                      | &ensp;
+                      = f.name
+                td.text-center= history.updated_at.utc.localtime.strftime("%d/%m/%Y, %H:%M")

@@ -10,9 +10,9 @@ class WordsController < ApplicationController
     @projects = Project.all
     return if params[:q].nil?
 
-    History.create keyword: params[:q], user_id: current_user.id if params[:q].present?
     @words = check_params_q_search
     check_result(@words)
+    search_history_service
   end
 
   def edit; end
@@ -103,5 +103,9 @@ class WordsController < ApplicationController
       flash.now[:error] = t(".error_import")
       render :new
     end
+  end
+
+  def search_history_service
+    SearchHistoryService.perform params[:q], params[:search_project], params[:commit], current_user.id
   end
 end
