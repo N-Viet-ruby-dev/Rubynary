@@ -1,4 +1,4 @@
-$("#project").DataTable().clear().destroy(false);
-$("#project_table").html("<%= j render partial: "project", collection: @projects %>")
-toastr["success"] = "Success!"
-initDataTable();
+$(".project_delete").bind("ajax:success", function() {
+  $(this).closest("tr").fadeOut();
+});
+toastr["success"]("Delete project successfully !");

@@ -3,32 +3,16 @@
 class WordsController < ApplicationController
   before_action :word_project, only: %i[create new]
   before_action :word, only: %i[destroy update edit]
-  before_action :authenticate_user!
+  before_action :check_lead_comtor, only: %i[destroy]
   LIMIT_SUGGESTIONS = 9
 
   def index
     @projects = Project.all
     return if params[:q].nil?
 
-    History.create keyword: params[:q], user_id: current_user.id if current_user.present? && params[:q].present?
-    @words = if params[:search_project].nil?
-               Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
-             else
-               Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
-                   .joins(:projects).where(projects: { id: params[:search_project] })
-             end
-             .page(params[:page]).per(3)
-    if @words.empty?
-      flash.now[:warning] = t(".find_result")
-    else
-      respond_to do |format|
-        format.html {}
-        format.js
-        format.json do
-          @words = @words.limit(LIMIT_SUGGESTIONS)
-        end
-      end
-    end
+    History.create keyword: params[:q], user_id: current_user.id if params[:q].present?
+    @words = check_params_q_search
+    check_result(@words)
   end
 
   def edit; end
@@ -54,18 +38,15 @@ class WordsController < ApplicationController
     end
   end
 
-  def new; end
+  def new
+    redirect_to :root if current_user.developer?
+  end
 
   def create
+    return if current_user.developer?
+
     flash.now[:warning] = t(".not_file_selected") unless params[:file].present?
-    response = ImportWords.perform params[:file], params[:project_ids], current_user.id
-    if response
-      flash[:success] = t(".file_imported")
-      redirect_to root_path
-    else
-      flash.now[:error] = t(".error_import")
-      render :new
-    end
+    check_import
   end
 
   private
@@ -80,5 +61,47 @@ class WordsController < ApplicationController
 
   def word_project
     @word_project ||= Project.pluck :name, :id
+  end
+
+  def check_result(words)
+    if words.empty?
+      flash.now[:warning] = t(".find_result")
+    else
+      respond_to do |format|
+        format.html {}
+        format.js
+        format.json do
+          words = words.limit(LIMIT_SUGGESTIONS)
+        end
+      end
+    end
+  end
+
+  def params_q_search
+    Word.ransack(ja_or_vi_or_en_cont: params[:q]).result(distinct: true)
+  end
+
+  def check_params_q_search
+    if params[:search_project].nil?
+      params_q_search
+    else
+      params_q_search.joins(:projects).where(projects: { id: params[:search_project] })
+    end
+      .page(params[:page]).per(3)
+  end
+
+  def import
+    ImportWords.perform params[:file], params[:project_ids], current_user.id
+  end
+
+  def check_import
+    import
+    if response
+      flash[:success] = t(".file_imported")
+      redirect_to root_path
+    else
+      flash.now[:error] = t(".error_import")
+      render :new
+    end
   end
 end

@@ -11,3 +11,6 @@ en:
     suggested_word:
       delete_question: "Delete word ! You sure ?"
       delete: "Delete"
+      waiting_for_update: "Waiting for update"
+      approved: "Approved"
+      disapproved: "Disapproved"

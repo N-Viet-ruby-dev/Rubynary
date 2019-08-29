@@ -10,39 +10,38 @@ header
                   i.fa.fa-home aria-hidden="true"
                   | &ensp;
                   = t(".search")
-              li
-                = link_to projects_path
-                  i.fa.fa-tasks aria-hidden="true"
-                  | &ensp;
-                  = t(".projects")
-              li
-                = link_to users_path
-                  i.fa.fa-user aria-hidden="true"
-                  | &ensp;
-                  = t(".users")
-              li
-                = link_to project_words_path
-                  i.fa.fa-plus-square aria-hidden="true"
-                  | &ensp;
-                  = t(".project_word")
-              li
-                = link_to suggested_words_path
-                  i.fa.fa-edit aria-hidden="true"
-                  | &ensp;
-                  = t(".my_list_edit")
+              - if !current_user.developer?
+                - if current_user.lead_comtor?
+                  li
+                    = link_to projects_path
+                      i.fa.fa-tasks aria-hidden="true"
+                      | &ensp;
+                      = t(".projects")
+                  li
+                    = link_to users_path
+                      i.fa.fa-user aria-hidden="true"
+                      | &ensp;
+                      = t(".users")
+                li
+                  = link_to project_words_path
+                    i.fa.fa-plus-square aria-hidden="true"
+                    | &ensp;
+                    = t(".project_word")
+                li
+                  = link_to suggested_words_path
+                    i.fa.fa-edit aria-hidden="true"
+                    | &ensp;
+                    = t(".my_list_edit")
           .register
             ul
-              - if user_signed_in?
+              -if !current_user.developer?
                 li
                   = link_to new_word_path
                     i.fa.fa-upload aria-hidden="true"
                     | &ensp;
                     = t(".import_file")
-                li
-                  = link_to  destroy_user_session_path, data: { confirm: t(".sure") }, method: :delete
-                    i.fa.fa-sign-out aria-hidden="true"
-                    | &ensp;
-                    = current_user.name
-              - else
-                li
-                  = link_to t(".log_in"), new_user_session_path
+              li
+                = link_to  destroy_user_session_path, data: { confirm: t(".sure") }, method: :delete
+                  i.fa.fa-sign-out aria-hidden="true"
+                  | &ensp;
+                  = current_user.name

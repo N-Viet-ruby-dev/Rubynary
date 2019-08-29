@@ -5,10 +5,10 @@ tr
   td= suggested_word.description
   td.text-center
     - if suggested_word.status == "waiting"
-      i.fa.fa-spinner.fa-lg.waiting
+      i.fa.fa-spinner.fa-lg.waiting title=(t(".waiting_for_update"))
     - elsif suggested_word.status == "disapproved"
-      i.fa.fa-times.fa-lg.disapproved
+      i.fa.fa-times.fa-lg.disapproved title=(t(".disapproved"))
     - else
-      i.fa.fa-check.fa-lg.approved
+      i.fa.fa-check.fa-lg.approved title=(t(".approved"))
   td.text-center= link_to t(".delete"), suggested_word, method: :delete,
     data: { confirm: t(".delete_question") }, remote: true, class: "suggested_word_delete"
