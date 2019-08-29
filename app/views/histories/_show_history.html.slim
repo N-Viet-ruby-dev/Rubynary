@@ -11,6 +11,6 @@
             .history-item
               .history-type value="w" w
               .his-content
-                = history.keyword
+                = link_to "#{history.keyword}", search_path(q: history.keyword)
               .his-time
                 = l(history.created_at)
