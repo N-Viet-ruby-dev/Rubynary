@@ -34,7 +34,7 @@ header
                     = t(".my_list_edit")
           .register
             ul
-              -if !current_user.developer?
+              - if !current_user.developer?
                 li
                   = link_to new_word_path
                     i.fa.fa-upload aria-hidden="true"

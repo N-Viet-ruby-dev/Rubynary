@@ -314,11 +314,11 @@ Collapse
   margin-right: 5px;
 }
 
-span.select2-selection.select2-selection--multiple {
-  border-radius: 0;
+.input-group span.select2-selection.select2-selection--multiple {
   height: 100%;
-  width: 230px;
+  width: 99% !important;
   border: solid #37aade 1px !important;
+  border-radius: 5px !important;
 }
 
 #search_project{
@@ -348,45 +348,12 @@ input.btn.btn-primary.search {
   margin-left: 0.5%;
 }
 
-span.select2-dropdown.select2-dropdown--below{
-  width: 230px !important;
+tr {
+  border: 1.5px solid #23aade;
 }
 
-.history-item {
-  padding-top: .5em;
-  border-bottom: 1px solid #c5c5c5;
-  padding-bottom: .5em;
-  padding-left: .5em;
-  cursor: pointer;
-}
-
-.history-type[value="w"] {
-  background-color: #23aade;
-}
-
-.history-type {
-  height: 32px;
-  width: 32px;
-  background-color: orange;
-  text-align: center;
-  line-height: 32px;
-  border-radius: 50%;
-  float: left;
-  text-transform: capitalize;
-  color: #fff;
-  font-size: 14px;
-}
-
-.his-content {
-  line-height: 32px;
-  padding-left: 40px;
-  color: rgba(0,0,0,.7);
-}
-
-.his-time {
-  font-size: 10px;
-  text-align: right;
-  padding-right: 4px;
+i.fa.fa-history.fa-2x {
+  color: #23aade;
 }
 
 .modal-dialog{
@@ -427,7 +394,7 @@ a.button-login{
 }
 
 .easy-autocomplete {
-  width: 45% !important;
+  width: 50% !important;
 }
 
 a.btn.btn-primary.btn-sm.buton {

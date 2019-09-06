@@ -16,6 +16,6 @@ $(document).ready(function() {
   });
   $('#search_project').select2({
     placeholder: "All projects",
-    allowClear: true,
+    allowClear: true
   });
 });
