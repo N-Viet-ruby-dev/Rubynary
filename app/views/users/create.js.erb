@@ -1,5 +1,5 @@
 $("#user").DataTable().clear().destroy();
 $("#user-table").html("<%= j render partial: "user", collection: @users %>");
-$("#myModalNew").modal("hide");
+$("#modal-window").modal("hide");
 initDataTableUser();
-toastr["success"]("Add user successfully!");
+toastr["info"]("Add user successfully!");

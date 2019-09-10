@@ -4,6 +4,6 @@
       = f.text_field :q, placeholder: "Search", class: "form-control mr-sm-2", data: { behavior: "autocomplete" }, autocomplete: :off, required: true, value: "#{params[:q]}"
       = select_tag "search_project", options_for_select(@projects.collect{ |u| [u.name, u.id] }, params[:search_project]), multiple: true
       = f.submit t(".search"), class: "btn btn-primary search"
-      |&nbsp;&nbsp;&nbsp;
+      |&nbsp;&nbsp;
       = link_to histories_path, {:remote => true, "data-toggle" =>  "modal"}
         i.fa.fa-history.fa-2x

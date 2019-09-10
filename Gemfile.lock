@@ -338,6 +338,7 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   omniauth-google-oauth2
   owlcarousel-rails
+  popper_js (~> 1.14.5)
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.3)

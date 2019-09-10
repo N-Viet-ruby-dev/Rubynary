@@ -34,6 +34,7 @@ gem "select2-rails"
 gem "whenever", require: false
 gem "omniauth-google-oauth2"
 gem "figaro"
+gem "popper_js", "~> 1.14.5"
 
 group :development, :test do
   gem "rspec-rails", "~> 3.8"

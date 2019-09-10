@@ -4,11 +4,7 @@ en:
       all_words: "All Words"
       none_projects: "None projects"
       select: "Select"
-      ja: "Japanese"
-      en: "English"
-      vi: "Vietnamese"
       add_project: "Add to project"
-      update: "Update"
     approval:
       check_for_update: "Check for update"
       original: "Original"
@@ -18,3 +14,9 @@ en:
     word:
       none: "None"
       check: "Check"
+    word_title:
+      ja: "Japanese"
+      en: "English"
+      vi: "Vietnamese"
+      update: "Update"
+      project: "Project"

@@ -5,20 +5,23 @@
         .row
           h1.text-center = t(".all_users")
           .col-sm-12.new-user
-            = link_to new_user_path, remote: true, class: "btn btn-info add-new-user" do
-              = t(".add_user")
+            = link_to t(".add_user"), new_user_path,  {remote: true, "data-toggle" =>  "modal", "data-target" => "#modal-window", class: "btn btn-info add-new"}
+            #modal-window.modal.hide.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" 
+              .modal-dialog role="document" 
+                .modal-content
           .col-sm-12
             table#user.table.table-striped.table-bordered.dataTable.table-hover aria-describedby="zero_config_info" role="grid"
               thead#user-thead
                 tr role="row"
-                  th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
+                  th data-orderable="true"
                     = t(".name")
-                  th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
+                  th data-orderable="true"
                     = t(".email")
-                  th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
+                  th data-orderable="true"
                     = t(".role")
-                  th.text-center= t(".edit")
-                  th.text-center= t(".delete")
+                  th.text-center data-orderable="false"
+                    = t(".edit")
+                  th.text-center data-orderable="false"
+                    = t(".delete")
               tbody#user-table
                 = render partial: "user", collection: @users, as: :user
-#myModalIndex

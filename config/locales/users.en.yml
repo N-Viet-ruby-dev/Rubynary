@@ -1,18 +1,18 @@
 en:
   users:
     index:
-      all_user: "All Users"
+      all_users: "Users Management"
       name: "Name"
       email: "Email"
       role: "Role"
       edit: "Edit"
       delete: "Delete"
-      add_user: "Add New User"
+      add_user: "Add user"
     edit:
-      edit: "Edit"
+      edit: "Edit user"
       save: "Save"
     new:
-      new: "New"
+      new: "New user"
       create: "Create"
     user:
-      conf: "You sure ?"
+      confirm: "Delete user ! You sure ?"

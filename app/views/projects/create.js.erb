@@ -1,5 +1,5 @@
 $("#project").DataTable().clear().destroy();
 $("#project_table").html("<%= j render partial: "project", collection: @projects %>");
-$("#myModal").modal("hide");
+$("#modal-window").modal("hide");
 initDataTable();
-toastr["success"] = "Success!"
+toastr["info"] = "Create project successfully!"

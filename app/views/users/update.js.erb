@@ -1,5 +1,5 @@
 $("#user").DataTable().clear().destroy();
 $("#user-table").html("<%= j render partial: "user", collection: @users %>");
-$("#myModalEdit").modal("hide");
+$("#modal-window").modal("hide");
 initDataTableUser();
-toastr["success"]("Update user successfully!");
+toastr["info"]("Update user successfully!");

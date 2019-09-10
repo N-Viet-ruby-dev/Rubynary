@@ -3,5 +3,5 @@ tr
   td= project.name
   td= project.color_code
   td= l(project.created_at, format: :default)
-  td.text-center= link_to t(".delete"), project, method: :delete,
-      data: { confirm: t(".sure") }, remote: true, class: "project_delete"
+  td.text-center= link_to project, method: :delete, data: { confirm: t(".confirm") }, remote: true, class: "project_delete" do
+    i.fa.fa-trash.fa-lg

@@ -10,5 +10,5 @@ tr
       i.fa.fa-times.fa-lg.disapproved title=(t(".disapproved"))
     - else
       i.fa.fa-check.fa-lg.approved title=(t(".approved"))
-  td.text-center= link_to t(".delete"), suggested_word, method: :delete,
-    data: { confirm: t(".delete_question") }, remote: true, class: "suggested_word_delete"
+  td.text-center= link_to suggested_word, method: :delete, data: { confirm: t(".delete_question") }, remote: true, class: "suggested_word_delete" do
+    i.fa.fa-trash.fa-lg

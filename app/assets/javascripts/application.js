@@ -23,6 +23,8 @@
 //= require select2-full
 //= require jquery.easy-autocomplete
 //= require search
+//= require popper
+
 
 function initDataTable(){
   $('#project').DataTable({

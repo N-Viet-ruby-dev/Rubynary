@@ -215,6 +215,8 @@ body#login {
   width: 49%;
   float: left;
   height: 90%;
+  max-height: 90%;
+  overflow: auto;
   border: 1px solid #23aade;
   background-color: white;
 }
@@ -248,13 +250,20 @@ body#login {
 .description{
   margin: 10px;
   font-size: 20px;
+  max-height: 78%;
+  overflow: auto;
 }
 
 .clear { clear: both }
 Collapse
 
-/* Project
--------------------------------------------------- */
+i.fa.fa-edit.fa-lg {
+  color: #23aade !important;
+}
+
+i.fa.fa-trash.fa-lg {
+  color: #37aade;
+}
 
 .table-project{
   text-align: center;
@@ -265,17 +274,28 @@ Collapse
 }
 
 #close{
-  float: right;
   margin-top: 0px;
 }
 
 .new-user{
   margin-bottom: 20px;
+  float: left;
+}
+.create-new-user {
+  float: left;
 }
 
-.add-new-user{
-  float: right;
-  border-radius: 0px !important;
+.submit{
+  width: 100%;
+}
+
+h1.text-center {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.add-new{
+  float: left;
   background-color: #23aade !important;
 }
 
@@ -428,4 +448,9 @@ i.fa.fa-check.approved {
 
 input#disapproval {
   float: right;
+}
+
+.page-item.active .page-link {
+  background-color: #37aade !important;
+  border-color: white !important;
 }
