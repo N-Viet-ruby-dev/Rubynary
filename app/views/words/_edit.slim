@@ -1,24 +1,20 @@
-#myModalEdit.modal.fade.bd-example-modal-lg aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1"
-  .modal-dialog.modal-lg
-    .modal-content
-      .modal-header
-        h2= t(".edit")
-        button#close aria-label="Close" data-dismiss="modal" type="button"
-          span aria-hidden="true"  ×
-      .modal-body
-        = form_for word, url: suggested_words_path, method: :post, remote: true do |f|
-          = f.hidden_field :id, class: "form-control"
-          .form-group
-            = f.label :ja
-            = f.text_field :ja, class: "form-control"
-          .form-group
-            = f.label :en
-            = f.text_field :en, class: "form-control"
-          .form-group
-            = f.label :vi
-            = f.text_field :vi, class: "form-control"
-          .form-group
-            = f.label :description
-            = f.text_area  :description, class: "form-control"
-          .form-group
-            = f.submit t(".save"), id: "save", remote: true, class: "btn btn-primary"
+.modal-header
+  button#close-create data-dismiss="modal" type="button" x
+  h4#myModalLabel.modal-title= t(".edit")
+.modal-body
+  = form_for word, url: suggested_words_path, method: :post, remote: true do |f|
+    = f.hidden_field :id, class: "form-control"
+    .form-group
+      = f.label :ja
+      = f.text_field :ja, class: "form-control", required: true
+    .form-group
+      = f.label :en
+      = f.text_field :en, class: "form-control", required: true
+    .form-group
+      = f.label :vi
+      = f.text_field :vi, class: "form-control", required: true
+    .form-group
+      = f.label :description
+      = f.text_area  :description, class: "form-control"
+    .form-group
+      = f.submit t(".save"), id: "save", remote: true, class: "btn btn-info submit"

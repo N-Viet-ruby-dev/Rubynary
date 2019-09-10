@@ -2,7 +2,7 @@
   $("#word-projects").DataTable().clear().destroy();
   $("#word-project-table").html("<%= j render partial: 'word', collection: @words, as: :word %>");
   initDataTableWordProjects();
-  toastr["success"]("Done!");
+  toastr["info"]("Add words to projects successfully!");
 <% else %>
   toastr["error"]("Please choose projects and words!");
 <% end %>

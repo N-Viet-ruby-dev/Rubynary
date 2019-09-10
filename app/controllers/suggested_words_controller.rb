@@ -15,7 +15,15 @@ class SuggestedWordsController < ApplicationController
     @suggested_word = SuggestedWord.new(suggested_word_params.merge(
                                           created_by_id: current_user.id, word_id: params[:word][:id], status: 0
                                         ))
-    render "new" unless @suggested_word.save
+    respond_to do |format|
+      format.js
+    end
+
+    if @suggested_word.save
+      flash[:info] = "The revision has been added to the update waiting list !"
+    else
+      flash[:error] = "Edit word falsed !"
+    end
   end
 
   def destroy

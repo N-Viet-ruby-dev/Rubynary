@@ -10,11 +10,11 @@
         - else
           = t(".none_project")
       li.list-group-item
-        = t(".ja", word: word.ja)
+        =raw t(".ja", word: word.ja)
       li.list-group-item
-        = t(".en", word: word.en)
+        =raw t(".en", word: word.en)
       li.list-group-item
-        = t(".vi", word: word.vi)
+        =raw t(".vi", word: word.vi)
   #sidebar
     h4.description
       = raw t(".description")
@@ -26,7 +26,9 @@
         button.btn.btn-warning.edit type="button" title= t(".notifications_waiting_for_editing")
           = t(".can_not_edit")
       - else
-        = link_to t(".edit"), edit_word_path(word), class: "btn btn-info", id: "btn-info-edit", remote: true
+        = link_to t(".edit"), edit_word_path(word),  {remote: true, "data-toggle" =>  "modal", "data-target" => "#modal-window", class: "btn btn-info", id: "btn-info-edit"}
+        #modal-window.modal.hide.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" 
+          .modal-dialog role="document" 
+            .modal-content
       - if current_user.lead_comtor?
         = link_to t(".delete"), word, class: "btn btn-danger delete", method: :delete, data: { confirm: t(".confirm") }, remote: true, id: "word_delete"
-#myModalIndex
