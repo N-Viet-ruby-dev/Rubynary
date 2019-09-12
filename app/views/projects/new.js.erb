@@ -1,2 +1,2 @@
-$("#myModal1").html("<%= j render 'projects/new', project: @project %> ");
-$("#myModal").modal("show");
+$("#modal-window").find(".modal-content").html("<%= j render 'new', project: @project %>");
+$("#modal-window").modal();

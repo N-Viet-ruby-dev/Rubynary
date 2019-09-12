@@ -10,9 +10,9 @@ en:
     result_search:
       project_name: "Project Name"
       description: "<strong>Description : </strong>"
-      vi: "Vietnamese: %{word}"
-      en: "English: %{word}"
-      ja: "Japanese: %{word}"
+      vi: "<strong>Vietnamese:</strong> %{word}"
+      en: "<strong>English:</strong> %{word}"
+      ja: "<strong>Japanese:</strong> %{word}"
       confirm: "Are you sure to delete this word ?"
       none_project: "None project"
       can_not_edit: "Can't edit"
@@ -34,7 +34,7 @@ en:
       delete: "Delete"
       confirm: "Are you sure to delete this word ?"
     edit:
-      edit: "Edit"
+      edit: "Edit word"
       save: "Save"
     form_search:
       search: "Search"

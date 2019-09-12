@@ -3,25 +3,25 @@
     .table-responsive
       #zero_config_wrapper.dataTables_wrapper.container-fluid.dt-bootstrap4
         .row
-          h4.card-title
-            b= t(".project_management")
+          h1.text-center= t(".project_management")
           .col-sm-12.new-user
-            span
-              = link_to t(".add_project"), new_project_url, remote: true, class: "btn btn-primary btn-sm buton"
-            .col-sm-12
-              table#project.table.table-striped.table-bordered.dataTable.table-hover aria-describedby="zero_config_info" role="grid" style= "text-align: center"
-                thead#user-thead
-                  tr role="row"
-                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                      = t(".project_id")
-                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                      = t(".name")
-                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                      = t(".color")
-                    th.sorting_asc aria-controls="zero_config" aria-label=("Name: activate to sort column descending") aria-sort="ascending" colspan="1" rowspan="1" tabindex="0"
-                      = t(".created_at")
-                    th.text-center data-orderable="false"
-                      = t(".delete")
-                tbody#project_table
-                  = render partial: "project", collection: @projects
-#myModal1
+            = link_to t(".add_project"), new_project_url,  {remote: true, "data-toggle" =>  "modal", "data-target" => "#modal-window", class: "btn btn-info add-new"}
+            #modal-window.modal.hide.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" 
+              .modal-dialog role="document" 
+                .modal-content
+          .col-sm-12
+            table#project.table.table-striped.table-bordered.dataTable.table-hover aria-describedby="zero_config_info" role="grid" style= "text-align: center"
+              thead#user-thead
+                tr role="row"
+                  th data-orderable="true"
+                    = t(".project_id")
+                  th data-orderable="true"
+                    = t(".name")
+                  th data-orderable="true"
+                    = t(".color")
+                  th data-orderable="true"
+                    = t(".created_at")
+                  th.text-center data-orderable="false"
+                    = t(".delete")
+              tbody#project_table
+                = render partial: "project", collection: @projects

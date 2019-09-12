@@ -1,2 +1,2 @@
-$('#myModalIndex').html("<%= j render 'edit', user: @user %>");
-$('#myModalEdit').modal('show');
+$("#modal-window").find(".modal-content").html("<%= j render 'edit', user: @user %>");
+$("#modal-window").modal();

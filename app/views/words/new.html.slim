@@ -1,12 +1,14 @@
 .container
   .row
-    .col-sm-9.col-md-7.col-lg-5.mx-auto
-      h2.mt-5= t(".import_from")
-      br
-      = form_tag words_path, multipart: true do
-        .form-group
-          = select_tag :project_ids, options_for_select(@word_project, class: "form-control"), { prompt: t(".select_project")}
-        .form-group
-          = file_field_tag :file
-        .form-group
-          = submit_tag t(".import"), class: "btn btn-success form-control"
+    .col-sm-9.col-md-7.col-lg-6.mx-auto
+      .card.card-signin.my-5
+        .card-body
+          h2.text-center= t(".import_from")
+          br
+          = form_tag words_path, multipart: true do
+            .form-group
+              = select_tag :project_ids, options_for_select(@word_project, class: "form-control"), { prompt: t(".select_project")}
+            .form-group
+              = file_field_tag :file
+            .form-group
+              = submit_tag t(".import"), class: "btn btn-info form-control"

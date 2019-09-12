@@ -2,18 +2,18 @@ en:
   projects:
     index:
       project_panagement: Project Management
-      add_project: Add Project
+      add_project: Add project
       project_id:  Project ID
       name: Name
       color: Color
-      created_at: Created_At
+      created_at: Created At
       delete: Delete
     new:
-      add_new_project: Add New Project
+      new: New project
       submit: Submit
     project:
       delete: Delete
-      sure: Sure?
+      confirm: Delete project ! You sure?
   time:
     formats:
      default: "%d/%m/%Y"
