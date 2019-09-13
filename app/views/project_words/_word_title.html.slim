@@ -12,3 +12,5 @@ tr role="row"
     = t(".project")
   th data-orderable="true"
     = t(".update") + "(#{SuggestedWord.where(status: "waiting").count})"
+  th data-orderable="false"
+    = t(".delete")

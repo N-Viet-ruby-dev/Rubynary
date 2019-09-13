@@ -26,7 +26,7 @@
         button.btn.btn-warning.edit type="button" title= t(".notifications_waiting_for_editing")
           = t(".can_not_edit")
       - else
-        = link_to t(".edit"), edit_word_path(word),  {remote: true, "data-toggle" =>  "modal", "data-target" => "#modal-window", class: "btn btn-info", id: "btn-info-edit"}
+        = link_to t(".edit"), edit_word_path(word),  {remote: true, "data-toggle" =>  "modal", "data-target" => "#modal-window", class: "btn btn-info edit", id: "btn-info-edit"}
         #modal-window.modal.hide.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" 
           .modal-dialog role="document" 
             .modal-content

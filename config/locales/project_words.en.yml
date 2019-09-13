@@ -14,9 +14,11 @@ en:
     word:
       none: "None"
       check: "Check"
+      delete: "Delete ! You sure ?"
     word_title:
       ja: "Japanese"
       en: "English"
       vi: "Vietnamese"
       update: "Update"
       project: "Project"
+      delete: "Delete"

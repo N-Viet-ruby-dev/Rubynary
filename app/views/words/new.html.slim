@@ -9,6 +9,6 @@
             .form-group
               = select_tag :project_ids, options_for_select(@word_project, class: "form-control"), { prompt: t(".select_project")}
             .form-group
-              = file_field_tag :file
+              = file_field_tag :file, required: true
             .form-group
               = submit_tag t(".import"), class: "btn btn-info form-control"
