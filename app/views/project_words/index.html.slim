@@ -5,10 +5,10 @@
         .row
           .col-sm-12
             h1.text-center= t (".all_words")
-          = form_for :projects, remote: true do |f|
+            = form_for :projects, remote: true do |f|
               .select-box
                 = select_tag "project_id", options_for_select(@projects.collect{ |u| [u.name, u.id] }), remote: true, prompt: t(".none_projects")
-                = f.submit t(".add_project"), class: "add-to-project"
+                = f.submit t(".add_project"), class: "btn add-to-project"
                 = f.select :name, @projects.map(&:name), {}, multiple: true, class: "add-project"
               table#word-projects.table.table-striped.table-bordered
                 thead#word-title

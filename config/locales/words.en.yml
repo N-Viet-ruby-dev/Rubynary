@@ -17,15 +17,16 @@ en:
       none_project: "None project"
       can_not_edit: "Can't edit"
       delete: "Delete"
+      edit: "Edit"
       notifications_waiting_for_editing: "This word is pending approval, please wait !"
     create:
-      file_imported: File Imported
-      not_file_selected: Not File Selected
-      error_import: Error Import
+      error_import: " records imported false! Position the rows : "
+      success_import: " records imported successfully!"
+      file_error_import: "Error! Check the file format again!"
     new:
-      import_from: Import From CSV-Excel File
-      import: Import
-      select_project: Select Project...
+      import_from: "Import From CSV-Excel File"
+      import: "Import"
+      select_project: "Select Project..."
       description: "<strong>Description : </strong> "
       vi: "Vietnamese: %{word}"
       en: "English: %{word}"

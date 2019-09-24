@@ -45,8 +45,7 @@ class WordsController < ApplicationController
   def create
     return if current_user.developer?
 
-    flash.now[:warning] = t(".not_file_selected") unless params[:file].present?
-    check_import
+    import
   end
 
   private
@@ -91,17 +90,17 @@ class WordsController < ApplicationController
   end
 
   def import
-    ImportWords.perform params[:file], params[:project_ids], current_user.id
+    count_created, rows_error = ImportWords.perform params[:file], params[:project_ids], current_user.id
+    check_import(count_created, rows_error)
+    redirect_to new_word_path
   end
 
-  def check_import
-    import
-    if response
-      flash[:success] = t(".file_imported")
-      redirect_to root_path
+  def check_import(count_created, rows_error)
+    if count_created.positive?
+      flash[:warning] = "#{rows_error.size} " + t(".error_import") + rows_error.to_s if rows_error.size.positive?
+      flash[:info] = count_created.to_s + t(".success_import")
     else
-      flash.now[:error] = t(".error_import")
-      render :new
+      flash[:error] = t(".file_error_import")
     end
   end
 

@@ -17,16 +17,56 @@ thead#word {
 
 a#word_delete {
   width: 49%;
+  margin-top: 2%;
 }
 
-#btn-info-edit {
-  float: right;
+#btn-info-edit{
   width: 49%;
+  float: right;
+  margin-top: 2%;
 }
 
-button.btn.btn-warning.edit {
-  float: right;
+.btn.btn-info.edit {
+  background-color:#23aade;
+  transition: all 0.35s ease;
+  border-radius: 5px;
+}
+
+.btn.btn-info.edit:hover{
+  border: 1px solid #23aade;
+  background-color:white;
+  color:#23aade;
+  box-shadow:0px 0px 25px 0px #23aade;
+}
+
+.btn.btn-warning.edit{
+  margin-top: 2%;
+  color: white;
   width: 49%;
+  float: right;
+  background-color:#B7950B;
+  transition: all 0.35s ease;
+  border-radius: 5px;
+}
+
+.btn.btn-warning.edit:hover{
+  border: 1px solid #B7950B;
+  background-color:white;
+  color:#B7950B;
+  box-shadow:0px 0px 25px 0px #B7950B;
+}
+
+.btn.btn-danger.delete{
+  background-color:#ef4430;
+  transition: all 0.35s ease;
+  border-radius: 5px;
+}
+
+.btn.btn-danger.delete:hover{
+  border: 1px solid #ef4430;
+  background-color:white;
+  color:#ef4430;
+  box-shadow:0px 0px 25px 0px #ef4430;
 }
 
 :root {
@@ -214,19 +254,29 @@ body#login {
 #post {
   width: 49%;
   float: left;
-  height: 90%;
+  height: 87%;
   max-height: 90%;
   overflow: auto;
   border: 1px solid #23aade;
   background-color: white;
+  border-radius: 5px;
 }
 
 #sidebar {
   width: 49%;
   float: right;
-  height: 90%;
+  height: 87%;
   border: 1px solid #23aade;
   background-color: white;
+  border-radius: 5px;
+}
+
+#post:hover{
+  transform: scale(1.02);
+}
+
+#sidebar:hover{
+  transform: scale(1.02);
 }
 
 .list-group.list-group-flush {
@@ -237,10 +287,19 @@ body#login {
   margin: 0 auto;
   padding: 15px;
   width: 60%;
-  height: 300px;
+  height: 305px;
   border: 1px solid #23aade;
+  border-radius: 5px;
   margin-top: 26px;
   margin-bottom: 32px;
+}
+
+.content-word:hover {
+  box-shadow:0px 0px 10px 0px #23aade;
+}
+
+#cssmenu > ul > li > a:hover {
+  transform: scale(1.2);
 }
 
 #word {
@@ -265,6 +324,10 @@ i.fa.fa-trash.fa-lg {
   color: #23aade;
 }
 
+.fa.fa-trash.fa-lg:hover {
+  transform: scale(1.5);
+}
+
 .table-project{
   text-align: center;
 }
@@ -281,6 +344,7 @@ i.fa.fa-trash.fa-lg {
   margin-bottom: 20px;
   float: left;
 }
+
 .create-new-user {
   float: left;
 }
@@ -326,9 +390,9 @@ h1.text-center {
   border-radius: 0px !important;
 }
 
-.add-to-project{
-  background: #3baade;
-  color: #fff;
+.btn.add-to-project{
+  background: #23aade;
+  color: white;
   border: none;
   height: 100%;
   margin-right: 5px;
@@ -341,6 +405,14 @@ h1.text-center {
   border-radius: 5px !important;
 }
 
+span.select2-selection.select2-selection--multiple {
+  border: solid #23aade 1px !important;
+}
+
+select#project_ids {
+  width: 100%;
+}
+
 #search_project{
   border: 1px solid #23aade;
   background: #fff;
@@ -349,7 +421,7 @@ h1.text-center {
 }
 
 .btn{
-  border-radius: 0px !important;
+  border-radius: 5px !important;
 }
 
 .search{
@@ -362,10 +434,18 @@ form.form-inline.my-2.my-lg-0{
   width: 55%;
 }
 
-input.btn.btn-primary.search {
+.btn.btn-primary.search {
   background-color: #23aade !important;
   width: 10%;
+  transition: all 0.35s ease;
   margin-left: 0.5%;
+}
+
+.btn.btn-primary.search:hover{
+  border: 1px solid #23aade;
+  background-color:white !important;
+  color:#23aade;
+  box-shadow:0px 0px 25px 0px #23aade;
 }
 
 tr {
@@ -374,6 +454,10 @@ tr {
 
 i.fa.fa-history.fa-2x {
   color: #23aade;
+}
+
+.fa.fa-history.fa-2x:hover {
+  transform: scale(1.2);
 }
 
 .modal-dialog{
@@ -390,13 +474,17 @@ i.fa.fa-history.fa-2x {
   border-color: #23aade !important;
 }
 
+.easy-autocomplete:hover{
+  box-shadow:0px 0px 10px 0px #23aade;
+}
+
 .radio-button {
   padding-left: 15px;
 }
 
 span.select2.select2-container.select2-container--default {
   width: 32% !important;
-  margin-left: 0.5%
+  margin-left: 0.5%;
 }
 
 .with-google{
@@ -422,7 +510,7 @@ a.btn.btn-primary.btn-sm.buton {
 }
 
 .list-group-item {
-  padding: .5rem .5rem !important;
+  padding: .5rem 1rem !important;
   border: 1px solid rgb(255, 255, 255) !important;
 }
 
@@ -430,12 +518,24 @@ i.fa.fa-spinner.waiting {
   color: #ffc000;
 }
 
-i.fa.fa-times.disapproved {
+i.fa.fa-times.fa-lg.disapproved {
   color: red;
+}
+
+i.fa.fa-times.fa-lg.disapproved:hover {
+  transform: scale(1.5);
 }
 
 i.fa.fa-check.approved {
   color: #07f53e;
+}
+
+.fa.fa-check.approved:hover {
+  transform: scale(1.5);
+}
+
+.fa.fa-spinner.waiting:hover {
+  transform: scale(1.5);
 }
 
 .col-md-6.suggested-word {
@@ -453,4 +553,8 @@ input#disapproval {
 .page-item.active .page-link {
   background-color: #23aade !important;
   border-color: white !important;
+}
+
+a.check {
+  color: #23aade;
 }

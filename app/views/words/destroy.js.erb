@@ -1,5 +1,9 @@
 $("#word_delete").bind("ajax:success", function() {
   $(this).closest("tr").fadeOut();
+  window.location.reload();
 });
-window.location.reload();
+
+$(".project_word_delete").bind("ajax:success", function() {
+  $(this).closest("tr").fadeOut();
+});
 toastr["info"]("Delete word successfully !");
