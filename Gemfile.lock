@@ -299,7 +299,7 @@ GEM
     tilt (2.0.9)
     toastr-rails (1.0.3)
       railties (>= 3.1.0)
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
